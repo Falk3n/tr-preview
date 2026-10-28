@@ -1,0 +1,10 @@
+{
+  "name": "Total Reformation",
+  "short_name": "TR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0B0B0B",
+  "theme_color": "#0B0B0B",
+  "icons": [{ "src": "../assets/img/favicon.jpg", "sizes": "300x300", "type": "image/jpeg", "purpose": "any" }]
+}

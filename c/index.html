@@ -4,179 +4,285 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#EFE8DE">
-<title>Total Reformation · Concept C · Studio</title>
+<meta name="theme-color" content="#0F3B3A">
+<title>Total Reformation · Concept C · Body map</title>
 <link rel="icon" href="../assets/img/favicon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/concept-bar.css">
 <style>
-:root{--bg:#EFE8DE;--bg2:#E6DDD0;--ink:#2B2620;--mute:#7A6F62;--line:#D5CABB;--clay:#B5643C;--sage:#7D8B74;--card:#F7F3EC;
---serif:"Fraunces",Georgia,serif;--sans:"DM Sans",system-ui,sans-serif}
+:root{--teal:#0F3B3A;--teal2:#16504E;--sand:#EDE6D8;--sand2:#E2D8C5;--mint:#9FE2C5;--mint2:#D7F3E6;--ink:#0B2423;--mute:#5E6F6B;--line:#CFC6B4;--card:#F7F3EA;
+--disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"Manrope",system-ui,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}a{color:inherit}
-.wrap{max-width:1220px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
-.kick{font:500 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--clay)}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;background:var(--ink);color:var(--bg);text-decoration:none;font:500 15px var(--sans);transition:transform .2s}
-.btn:hover{transform:translateY(-2px)}.btn.soft{background:transparent;border:1px solid var(--ink);color:var(--ink)}.btn.clay{background:var(--clay)}
-nav.top{position:sticky;top:0;z-index:20;background:rgba(239,232,222,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
-nav.top .wrap{display:flex;justify-content:space-between;align-items:center;height:76px}
-.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo i{width:38px;height:38px;border-radius:50%;background:var(--ink);color:var(--bg);display:grid;place-items:center;font:500 14px var(--sans);font-style:normal}
-.logo span{font:400 22px var(--serif);letter-spacing:-.01em}
-.nl{display:flex;gap:28px;font-size:15px}.nl a{text-decoration:none;color:var(--mute)}.nl a:hover{color:var(--ink)}
-@media(max-width:900px){.nl{display:none}nav.top .btn{padding:11px 18px;font-size:14px}}
-/* hero */
-.hero{padding:clamp(24px,4vw,50px) 0 clamp(60px,8vw,110px)}
-.hero .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
-h1{font:300 clamp(48px,7vw,104px)/1 var(--serif);letter-spacing:-.025em;margin:20px 0 24px}
-h1 em{font-style:italic;color:var(--clay)}
-.hero p.l{font-size:clamp(17px,1.5vw,20px);color:#4a4239;max-width:30em}
-.arch{position:relative}
-.arch .main{border-radius:999px 999px 24px 24px;overflow:hidden;aspect-ratio:4/5}
-.arch .main img{width:100%;height:100%;object-fit:cover}
-.arch .chip{position:absolute;left:-22px;bottom:40px;background:var(--card);border-radius:18px;padding:14px 18px;box-shadow:0 18px 40px rgba(60,40,20,.12);display:flex;gap:12px;align-items:center;font-size:14px}
-.arch .chip img{width:46px;height:46px;border-radius:50%;object-fit:cover;object-position:top}
-.arch .chip b{display:block;font:500 15px var(--sans)}
-.stars{color:var(--clay);letter-spacing:2px}
-@media(max-width:860px){.hero .grid{grid-template-columns:1fr}.arch{order:-1;max-width:460px;margin:auto}.arch .chip{left:10px}}
-section{padding:clamp(70px,9vw,130px) 0}
-h2{font:300 clamp(38px,5vw,68px)/1.05 var(--serif);letter-spacing:-.02em;margin:14px 0 20px}
-h2 em{font-style:italic;color:var(--clay)}
-/* feel */
-.feel{background:var(--card);border-radius:clamp(24px,4vw,48px);margin:0 clamp(10px,2vw,24px)}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
-.cd{background:var(--bg);border-radius:24px;overflow:hidden}
-.cd img{aspect-ratio:4/3;object-fit:cover;width:100%}
-.cd div{padding:22px 24px 28px}.cd h3{font:400 28px/1.1 var(--serif);margin:0 0 8px}.cd p{margin:0;color:#5a5047;font-size:15.5px}
-@media(max-width:900px){.cards{grid-template-columns:1fr}}
-/* journey */
-.journey{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(30px,6vw,90px)}
-.jl{list-style:none;padding:0;margin:0;counter-reset:j}
-.jl li{counter-increment:j;display:grid;grid-template-columns:64px 1fr;gap:18px;padding:24px 0;border-bottom:1px solid var(--line)}
-.jl li:before{content:counter(j,decimal-leading-zero);font:300 38px/1 var(--serif);color:var(--clay)}
-.jl h3{margin:0 0 4px;font:500 19px var(--sans)}.jl p{margin:0;color:#5a5047;font-size:15.5px}
-@media(max-width:860px){.journey{grid-template-columns:1fr}}
-/* emma */
-.emma{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(30px,5vw,70px);align-items:center}
-.emma .ph{border-radius:24px 24px 999px 999px;overflow:hidden;aspect-ratio:4/5}
-.emma .ph img{width:100%;height:100%;object-fit:cover}
-.price{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}
-.price div{background:var(--card);border-radius:16px;padding:14px 18px;min-width:110px}.price b{display:block;font:400 30px var(--serif)}.price span{font-size:13px;color:var(--mute)}
-@media(max-width:860px){.emma{grid-template-columns:1fr}.emma .ph{max-width:460px}}
-/* testimonial */
-.quote{text-align:center;max-width:900px;margin:auto}
-.quote blockquote{font:300 clamp(28px,3.6vw,46px)/1.25 var(--serif);margin:20px 0}
-.quote cite{font-style:normal;color:var(--mute)}
-/* team */
-.team{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:40px}
-.tm{display:flex;gap:22px;align-items:center;background:var(--card);border-radius:28px;padding:22px}
-.tm img{width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:top;background:#fff;flex:none}
-.tm h3{font:400 30px/1 var(--serif);margin:4px 0 8px}.tm p{margin:0;font-size:15px;color:#5a5047}
-@media(max-width:860px){.team{grid-template-columns:1fr}.tm{flex-direction:column;text-align:center}}
-/* membership */
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
-.pl{background:var(--card);border-radius:28px;padding:32px;display:flex;flex-direction:column;gap:10px}
-.pl h3{font:400 30px var(--serif);margin:0}.pl .pr{font:300 54px/1 var(--serif)}.pl .pr small{font:400 15px var(--sans);color:var(--mute)}
-.pl ul{padding-left:18px;color:#5a5047;font-size:15.5px;margin:6px 0 20px}.pl .btn{margin-top:auto;justify-content:center}
-.pl.f{background:var(--ink);color:var(--bg)}.pl.f ul,.pl.f .pr small{color:#cbbfae}.pl.f .btn{background:var(--clay)}
-@media(max-width:900px){.plans{grid-template-columns:1fr}}
-/* visit */
-.visit{background:var(--sage);color:#F4F1EA;border-radius:clamp(24px,4vw,48px);margin:0 clamp(10px,2vw,24px) 24px}
-.visit .grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.visit h2 em{color:#F7D9C4}
-.form{background:rgba(255,255,255,.12);border-radius:24px;padding:26px;display:grid;gap:12px}
-.form input,.form select{width:100%;padding:14px 16px;border-radius:12px;border:0;font:400 16px var(--sans);background:#F4F1EA;color:var(--ink)}
-@media(max-width:860px){.visit .grid{grid-template-columns:1fr}}
-footer{padding:30px 0 110px;color:var(--mute);font-size:14px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.fd{opacity:0;transform:translateY(20px);transition:opacity .9s,transform .9s}.fd.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.fd{opacity:1;transform:none}}
+body{margin:0;background:var(--sand);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}a{color:inherit}button{font:inherit;color:inherit;cursor:pointer}
+.wrap{max-width:1260px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.k{font:700 12px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--teal2)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:14px;background:var(--teal);color:var(--sand);text-decoration:none;font:700 15px var(--sans);border:0}
+.btn.mint{background:var(--mint);color:var(--teal)}.btn.line{background:transparent;border:1.5px solid currentColor}
+/* nav */
+nav.top{position:sticky;top:0;z-index:30;background:var(--teal);color:var(--sand)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none;font:800 18px var(--disp);letter-spacing:-.01em}
+.logo i{width:34px;height:34px;border-radius:10px;background:var(--mint);color:var(--teal);display:grid;place-items:center;font:800 14px var(--disp);font-style:normal}
+.nl{display:flex;gap:26px;font-size:14.5px;font-weight:600}.nl a{text-decoration:none;opacity:.75}.nl a:hover{opacity:1}
+@media(max-width:900px){.nl{display:none}}
+/* hero / body map */
+.hero{background:var(--teal);color:var(--sand);padding:clamp(34px,5vw,64px) 0 clamp(50px,6vw,90px);border-radius:0 0 clamp(28px,4vw,56px) clamp(28px,4vw,56px);overflow:hidden}
+.hero .k{color:var(--mint)}
+h1{font:800 clamp(46px,7.4vw,108px)/.92 var(--disp);letter-spacing:-.035em;margin:12px 0 14px}
+h1 span{color:var(--mint)}
+.hero .intro{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+.hero .intro p{max-width:30em;margin:0;color:#cfe0dc;font-size:18px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:28px 0 0}
+.chips button{background:transparent;border:1.5px solid #3c6c69;color:var(--sand);padding:10px 16px;border-radius:999px;font:600 14.5px var(--sans);transition:.2s}
+.chips button.on{background:var(--mint);border-color:var(--mint);color:var(--teal)}
+.chips button:hover:not(.on){border-color:var(--mint)}
+@media(max-width:700px){.chips{flex-wrap:nowrap;overflow-x:auto;margin-right:-16px;padding-right:16px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}.chips button{flex:none}}
+.explorer{display:grid;grid-template-columns:minmax(240px,.75fr) 1.25fr;gap:clamp(20px,4vw,56px);margin-top:34px;align-items:start}
+@media(max-width:860px){.explorer{grid-template-columns:1fr}}
+.map{position:relative;aspect-ratio:200/440;max-height:640px;margin:auto;width:100%;max-width:300px}
+@media(max-width:860px){.map{max-width:200px}}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .body{fill:#1E5A57}
+.map .spiral{fill:none;stroke:var(--mint);stroke-width:1.6;stroke-dasharray:4 5;opacity:.55;animation:flow 14s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-180}}
+.hot{position:absolute;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;border:0;background:rgba(159,226,197,.25);display:grid;place-items:center;padding:0}
+.hot:before{content:"";width:12px;height:12px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 0 rgba(159,226,197,.7);animation:pulse 2.2s infinite}
+.hot.on{background:rgba(159,226,197,.45)}.hot.on:before{background:#fff;width:14px;height:14px}
+.hot span{position:absolute;left:36px;white-space:nowrap;font:700 12px var(--sans);color:var(--mint);opacity:0;transition:.2s;pointer-events:none}
+.hot.on span,.hot:hover span{opacity:1}
+.hot.l span{left:auto;right:36px}
+@keyframes pulse{70%{box-shadow:0 0 0 12px rgba(159,226,197,0)}100%{box-shadow:0 0 0 0 rgba(159,226,197,0)}}
+.panel{background:var(--sand);color:var(--ink);border-radius:28px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;min-height:100%}
+.panel .vid{position:relative;background:#000;min-height:260px}
+.panel video{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.panel .vid .cap{position:absolute;left:14px;bottom:14px;right:14px;background:rgba(11,36,35,.75);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;border-radius:12px;padding:10px 12px;font-size:13px;display:flex;gap:10px;align-items:center}
+.panel .vid .cap b{display:block;font-size:14px}
+.panel .vid .cap i{width:30px;height:30px;border-radius:50%;flex:none;background:url(../assets/img/darren-portrait.jpg) center 15%/cover}
+.panel .txt{padding:26px 26px 28px}
+.panel h2{font:800 34px/1 var(--disp);letter-spacing:-.02em;margin:6px 0 12px}
+.panel h4{margin:18px 0 8px;font:700 12px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.panel ul{margin:0;padding:0;list-style:none}.panel ul li{padding:6px 0 6px 22px;position:relative;font-size:15.5px}
+.panel ul li:before{content:"";position:absolute;left:0;top:13px;width:10px;height:10px;border-radius:3px;background:var(--mint);border:1.5px solid var(--teal2)}
+.panel ol{margin:0;padding:0;list-style:none;counter-reset:s}.panel ol li{counter-increment:s;display:flex;gap:10px;padding:5px 0;font-size:15.5px}
+.panel ol li:before{content:counter(s);flex:none;width:22px;height:22px;border-radius:50%;background:var(--teal);color:var(--mint);font:700 12px/22px var(--sans);text-align:center;margin-top:2px}
+.sugg{margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.sugg b{display:block;font:700 16px var(--sans)}.sugg span{font-size:13.5px;color:var(--mute)}
+.disc{font-size:12.5px;color:var(--mute);margin:14px 0 0}
+.panel.swap .txt,.panel.swap .vid{animation:swap .45s ease}
+@keyframes swap{from{opacity:.2;transform:translateY(8px)}}
+@media(max-width:1100px){.panel{grid-template-columns:1fr}.panel .vid{aspect-ratio:16/9;min-height:0}}
+section{padding:clamp(64px,8vw,110px) 0}
+h2.big{font:800 clamp(38px,5.4vw,72px)/.98 var(--disp);letter-spacing:-.03em;margin:12px 0 16px}
+h2.big span{color:var(--teal2);background:linear-gradient(transparent 62%,var(--mint) 62%)}
+/* first session timeline */
+.tl{margin-top:36px;display:grid;grid-template-columns:10fr 15fr 10fr 20fr minmax(130px,8fr);gap:4px}
+.tl div{background:var(--card);border-top:6px solid var(--teal);padding:16px 14px 18px;min-height:170px;border-radius:0 0 14px 14px}
+.tl div:nth-child(2){border-color:var(--teal2)}.tl div:nth-child(3){border-color:#3F8F7C}.tl div:nth-child(4){border-color:#6CC3A0}.tl div:nth-child(5){border-color:var(--mint)}
+.tl small{font:700 12px var(--sans);color:var(--mute);letter-spacing:.06em}
+.tl b{display:block;font:700 17px/1.2 var(--disp);margin:6px 0}
+.tl p{margin:0;font-size:14px;color:#3c4d4a}
+@media(max-width:900px){.tl{grid-template-columns:1fr 1fr}.tl div{min-height:0}.tl div:last-child{grid-column:1/-1}}
+@media(max-width:480px){.tl{grid-template-columns:1fr}}
+/* finder */
+.finder{background:var(--card);border-radius:clamp(24px,3vw,40px);padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px)}
+@media(max-width:900px){.finder{grid-template-columns:1fr}}
+.q{margin-bottom:22px}.q p{margin:0 0 10px;font-weight:700}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts button{background:var(--sand);border:1.5px solid var(--line);border-radius:12px;padding:11px 15px;font:600 14.5px var(--sans)}
+.opts button.on{background:var(--teal);color:var(--sand);border-color:var(--teal)}
+.result{background:var(--teal);color:var(--sand);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px;min-height:320px}
+.result .k{color:var(--mint)}
+.result h3{font:800 38px/1 var(--disp);letter-spacing:-.02em;margin:4px 0}
+.result .pr{font:800 48px/1 var(--disp);color:var(--mint)}.result .pr small{font:500 15px var(--sans);color:#bcd3ce;margin-left:6px}
+.result p{margin:0;color:#cfe0dc}
+.result .btn{margin-top:auto;align-self:flex-start}
+/* people */
+.people{display:grid;grid-template-columns:1fr 1fr 1.1fr;gap:16px;margin-top:34px}
+.pp{border-radius:24px;overflow:hidden;position:relative;aspect-ratio:3/4;background:var(--sand2)}
+.pp img{width:100%;height:100%;object-fit:cover}
+.pp:not(.txt)>div{position:absolute;left:12px;right:12px;bottom:12px;background:var(--card);border-radius:16px;padding:12px 14px}
+.pp b{display:block;font:800 22px var(--disp)}.pp span{font-size:13.5px;color:var(--mute)}
+.pp.txt{background:var(--teal);color:var(--sand);padding:28px;display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:auto}
+.pp.txt p{color:#cfe0dc;margin:0}.pp.txt .stat{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pp.txt .stat b{font:800 40px/1 var(--disp);color:var(--mint)}.pp.txt .stat span{color:#bcd3ce}
+@media(max-width:960px){.people{grid-template-columns:1fr 1fr}.pp.txt{grid-column:1/-1}}
+@media(max-width:520px){.people{grid-template-columns:1fr}}
+/* app strip */
+.appstrip{background:var(--mint2);border-radius:clamp(24px,3vw,40px);padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.appstrip .shots{display:flex;gap:12px;justify-content:center}
+.appstrip .shots img{width:46%;max-width:170px;border-radius:22px;border:6px solid var(--teal);aspect-ratio:9/16;object-fit:cover;background:#000}
+.appstrip .shots img:last-child{transform:translateY(24px)}
+@media(max-width:860px){.appstrip{grid-template-columns:1fr}}
+footer{background:var(--teal);color:#bcd3ce;padding:44px 0 120px;margin-top:clamp(60px,8vw,110px);font-size:14.5px}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}footer b{color:var(--sand);display:block;margin-bottom:6px}
+@media(max-width:760px){footer .wrap{grid-template-columns:1fr}}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.map .spiral,.hot:before{animation:none}}
 </style>
 </head>
 <body>
 <nav class="top"><div class="wrap">
-  <a class="logo" href="#"><i>TR</i><span>Total Reformation</span></a>
-  <div class="nl"><a href="#approach">Approach</a><a href="#journey">Your first visit</a><a href="#massage">Massage</a><a href="#team">Darren &amp; Emma</a><a href="#plans">Memberships</a></div>
-  <a class="btn" href="#visit">Book a visit</a>
+  <a class="logo" href="#"><i>TR</i>Total Reformation</a>
+  <div class="nl"><a href="#map">Body map</a><a href="#first">First session</a><a href="#finder">Find your session</a><a href="#people">Darren &amp; Emma</a><a href="#app">App</a></div>
+  <a class="btn mint" href="#finder">Book</a>
 </div></nav>
 
-<header class="hero"><div class="wrap grid">
-  <div>
-    <div class="kick">Brighton · Movement &amp; therapy studio</div>
-    <h1>Feel at home in <em>your body</em> again.</h1>
-    <p class="l">A small, private studio where training, hands-on therapy and good habits work together. No mirrors full of strangers. Just two people who know exactly how you move.</p>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:30px"><a class="btn" href="#visit">Book your first visit</a><a class="btn soft" href="#journey">What to expect</a></div>
+<header class="hero" id="map"><div class="wrap">
+  <div class="intro">
+    <div><div class="k">Human biomechanics · Brighton</div><h1>Where does it <span>hurt?</span></h1></div>
+    <p>Pain is usually where the problem shows up, not where it starts. Tap an area to see what's often behind it, how we'd work on it, and watch Darren explain one of the first corrections.</p>
   </div>
-  <div class="arch fd">
-    <div class="main"><img src="../assets/img/emma-coach.jpg" alt="Emma coaching a client in the studio"></div>
-    <div class="chip"><div><b>"Client quote goes here."</b><span class="stars">★★★★★</span> <span style="color:var(--mute)">Placeholder for a real review</span></div></div>
+  <div class="chips" id="chips" role="tablist" aria-label="Body areas"></div>
+  <div class="explorer">
+    <div class="map" id="map-fig">
+      <svg viewBox="0 0 200 440" aria-hidden="true">
+        <g class="body">
+          <ellipse cx="100" cy="40" rx="21" ry="25"/>
+          <rect x="91" y="58" width="18" height="30" rx="7"/>
+          <path d="M62 92 Q100 78 138 92 L144 150 Q133 190 129 216 L71 216 Q67 190 56 150Z"/>
+          <path d="M71 208 L129 208 Q138 238 133 260 L67 260 Q62 238 71 208Z"/>
+          <path d="M63 94 Q48 100 46 132 L40 202 Q38 226 44 242 L55 242 Q57 222 57 202 L66 142Z"/>
+          <path d="M137 94 Q152 100 154 132 L160 202 Q162 226 156 242 L145 242 Q143 222 143 202 L134 142Z"/>
+          <path d="M68 252 L98 252 L96 332 L94 410 Q94 422 88 428 L70 428 Q68 419 75 411 L73 332 Q64 290 68 252Z"/>
+          <path d="M132 252 L102 252 L104 332 L106 410 Q106 422 112 428 L130 428 Q132 419 125 411 L127 332 Q136 290 132 252Z"/>
+        </g>
+        <path class="spiral" d="M136 96 C112 128 80 146 80 196 C80 240 122 252 118 300 C115 340 88 378 84 422"/>
+        <path class="spiral" style="animation-direction:reverse" d="M64 96 C88 128 120 146 120 196 C120 240 78 252 82 300 C85 340 112 378 116 422"/>
+      </svg>
+    </div>
+    <article class="panel" id="panel" aria-live="polite">
+      <div class="vid"><video id="pv" muted playsinline loop autoplay preload="metadata"></video>
+        <div class="cap"><i></i><div><b id="pvT"></b>From Darren's tutorial library</div></div></div>
+      <div class="txt">
+        <div class="k" id="pk"></div>
+        <h2 id="ph"></h2>
+        <h4>Often linked to</h4><ul id="pl"></ul>
+        <h4>How we'd work on it</h4><ol id="po"></ol>
+        <div class="sugg"><div><b id="ps"></b><span id="pss"></span></div><a class="btn" href="#finder">Book</a></div>
+        <p class="disc">General guidance, not a diagnosis. Your assessment decides your plan.</p>
+      </div>
+    </article>
   </div>
 </div></header>
 
-<section class="feel" id="approach"><div class="wrap">
-  <div class="kick">Our approach</div>
-  <h2>Training, treatment and <em>education</em>, under one roof.</h2>
-  <p style="max-width:40em;color:#5a5047">We look at the whole of you: movement, posture, sleep, nutrition and stress. They're all connected, and no two people are the same.</p>
-  <div class="cards">
-    <div class="cd fd"><img src="../assets/img/cable-lunge-sm.jpg" alt="Functional training"><div><h3>Functional training</h3><p>Private and small-group sessions, programmed from how your body actually moves.</p></div></div>
-    <div class="cd fd"><img src="../assets/img/massage-sm.jpg" alt="Remedial massage"><div><h3>Remedial massage</h3><p>Emma's fascial hydration work eases pain and helps your training land.</p></div></div>
-    <div class="cd fd"><img src="../assets/img/kit-sm.jpg" alt="TR training kit"><div><h3>Learn at home</h3><p>REFORM, metabolic typing and video tutorials, so progress continues between visits.</p></div></div>
+<section id="first"><div class="wrap">
+  <div class="k">Your first session</div>
+  <h2 class="big">One hour. <span>Mapped out.</span></h2>
+  <p style="max-width:38em;color:#3c4d4a">No guesswork and no generic warm-up. Here's exactly how a first private session with Darren or Emma runs.</p>
+  <div class="tl rv">
+    <div><small>0–10 min</small><b>Talk</b><p>History, goals and what's been holding you back.</p></div>
+    <div><small>10–25 min</small><b>Posture photos</b><p>Front, side and back. You'll see what we see.</p></div>
+    <div><small>25–35 min</small><b>Gait</b><p>How you walk tells us how you load every joint.</p></div>
+    <div><small>35–55 min</small><b>Release &amp; first corrections</b><p>Self-massage and corrective moves you'll feel straight away.</p></div>
+    <div><small>55–60 min</small><b>Your plan</b><p>Saved to the TR app.</p></div>
   </div>
 </div></section>
 
-<section id="journey"><div class="wrap journey">
-  <div><div class="kick">Your first visit</div><h2>Gentle start. <em>Real</em> answers.</h2><p style="color:#5a5047">Most clients arrive with pain they've had for years. Your first session is about understanding why.</p>
-    <img class="fd" src="../assets/img/box-coach-sm.jpg" alt="Darren coaching" style="border-radius:24px;margin-top:26px;aspect-ratio:16/11;object-fit:cover"></div>
-  <ol class="jl">
-    <li class="fd"><div><h3>A conversation</h3><p>Your history, goals and what's been holding you back.</p></div></li>
-    <li class="fd"><div><h3>Posture &amp; gait</h3><p>We photograph your posture and watch you walk. You'll see what we see.</p></div></li>
-    <li class="fd"><div><h3>Release &amp; reset</h3><p>Simple self-massage and corrective moves you can feel working straight away.</p></div></li>
-    <li class="fd"><div><h3>Your plan</h3><p>A program built for you, in the TR app with video of every exercise.</p></div></li>
-  </ol>
-</div></section>
-
-<section id="massage" style="padding-top:0"><div class="wrap emma">
-  <div><div class="kick">With Emma</div><h2>Remedial massage that <em>moves</em> you forward.</h2>
-    <p style="color:#5a5047">Emma combines deep-tissue and fascial hydration work with her movement background. After each treatment you'll get her follow-up tutorials (pelvic position, wall retraction, core activation) in the app.</p>
-    <div class="price"><div><b>$85</b><span>45 min</span></div><div><b>$100</b><span>60 min</span></div><div><b>$120</b><span>Mobile, 60 min</span></div></div>
-    <a class="btn clay" href="#visit">Book a treatment</a> <span style="font-size:14px;color:var(--mute);margin-left:10px">Private health rebates available</span></div>
-  <div class="ph fd"><img src="../assets/img/emma-treat.jpg" alt="Emma treating a client"></div>
-</div></section>
-
-<section style="background:var(--bg2)"><div class="wrap quote fd">
-  <div class="kick">Client words</div>
-  <blockquote>"Placeholder for a real client story. Darren to supply two or three short testimonials with permission."</blockquote>
-  <cite>Client name, Brighton</cite>
-</div></section>
-
-<section id="team"><div class="wrap">
-  <div class="kick">The people</div><h2>Small studio. <em>Big</em> attention.</h2>
-  <div class="team">
-    <div class="tm fd"><img src="../assets/img/darren-portrait.jpg" alt="Darren Cox"><div><span class="kick" style="font-size:11px">Founder</span><h3>Darren Cox</h3><p>Biomechanics specialist and strength coach. He traded the conventional gym model for one that builds bodies up instead of breaking them down.</p></div></div>
-    <div class="tm fd"><img src="../assets/img/emma-portrait.jpg" alt="Emma Brook"><div><span class="kick" style="font-size:11px">Trainer &amp; therapist</span><h3>Emma Brook</h3><p>Former international dancer turned movement coach and remedial therapist. Precise, warm and quietly relentless about good form.</p></div></div>
+<section id="finder" style="padding-top:0"><div class="wrap">
+  <div class="finder rv">
+    <div>
+      <div class="k">Find your session</div>
+      <h2 class="big" style="font-size:clamp(34px,4vw,54px)">Two taps to the <span>right start.</span></h2>
+      <div class="q"><p>What brings you in?</p><div class="opts" data-q="why">
+        <button class="on" data-v="pain">Pain or injury</button><button data-v="perf">Strength &amp; performance</button><button data-v="health">Overall health</button><button data-v="recover">Recovery</button></div></div>
+      <div class="q"><p>How do you want to start?</p><div class="opts" data-q="how">
+        <button class="on" data-v="private">One-on-one</button><button data-v="group">Small group</button><button data-v="online">Online</button><button data-v="hands">Hands-on therapy</button></div></div>
+    </div>
+    <div class="result" id="res">
+      <div class="k">We'd suggest</div><h3 id="rT"></h3><div class="pr" id="rP"></div><p id="rD"></p>
+      <a class="btn mint" href="#">Book this</a>
+    </div>
   </div>
 </div></section>
 
-<section id="plans" style="padding-top:0"><div class="wrap">
-  <div class="kick">Memberships &amp; packs</div><h2>Find your <em>rhythm</em>.</h2>
-  <div class="plans">
-    <div class="pl fd"><h3>Group</h3><div class="pr">$320<small> / 8 sessions</small></div><ul><li>Customised small-group training</li><li>Your own program in the app</li><li>Valid 30 days</li></ul><a class="btn soft" href="#visit">Choose</a></div>
-    <div class="pl f fd"><h3>Private</h3><div class="pr">$640<small> / 8 sessions</small></div><ul><li>8 × 45 min one-on-one</li><li>Assessment and reassessment</li><li>Full video library access</li></ul><a class="btn" href="#visit">Choose</a></div>
-    <div class="pl fd"><h3>Online</h3><div class="pr">$180<small> / REFORM</small></div><ul><li>30-day foundations course</li><li>Follow-along video sessions</li><li>Join the REFORM community</li></ul><a class="btn soft" href="#visit">Start</a></div>
+<section id="people" style="padding-top:0"><div class="wrap">
+  <div class="k">The practitioners</div>
+  <h2 class="big">Two people. <span>Every session.</span></h2>
+  <div class="people">
+    <div class="pp rv"><img src="../assets/img/darren-arms.jpg" alt="Darren Cox"><div><b>Darren Cox</b><span>Founder · biomechanics, S&amp;C, metabolic typing</span></div></div>
+    <div class="pp rv"><img src="../assets/img/emma-treat.jpg" alt="Emma Brook treating a client"><div><b>Emma Brook</b><span>Trainer · remedial &amp; fascial massage</span></div></div>
+    <div class="pp txt rv"><p style="font:600 22px/1.35 var(--disp);color:var(--sand)">Training and hands-on treatment in the same room, so what Emma releases, Darren can retrain.</p>
+      <div class="stat"><div><b>2</b><span>practitioners, no handoffs</span></div><div><b>1</b><span>plan shared in the app</span></div></div></div>
   </div>
 </div></section>
 
-<section class="visit" id="visit"><div class="wrap grid">
-  <div><div class="kick" style="color:#F7D9C4">Visit us</div><h2>160 Martin Street, <em>Brighton</em>.</h2><p>Studio sessions Monday to Saturday. Call Darren on 0409 940 121, or leave your details and we'll find a time that suits.</p></div>
-  <form class="form" onsubmit="event.preventDefault();this.innerHTML='<p style=\'margin:0;font-size:18px\'>Thanks. This is a concept form, so nothing was sent.</p>'">
-    <input placeholder="Your name" required><input placeholder="Mobile or email" required>
-    <select><option>I'm interested in…</option><option>Private training</option><option>Customised group</option><option>Remedial massage</option><option>Treat &amp; Train</option></select>
-    <button class="btn" style="border:0;justify-content:center;cursor:pointer">Request a time</button>
-  </form>
+<section id="app" style="padding-top:0"><div class="wrap">
+  <div class="appstrip rv">
+    <div><div class="k">The TR app</div><h2 class="big" style="font-size:clamp(34px,4vw,54px)">Your plan goes <span>home with you.</span></h2>
+      <p style="color:#3c4d4a;max-width:32em">See your next session, open the exercises Darren set for you, and tap any one to watch him demonstrate it. Same login as this website.</p>
+      <a class="btn" href="../app/">Try the app demo</a></div>
+    <div class="shots"><img src="../assets/img/app/app-home.jpg" alt="App home screen"><img src="../assets/img/app/app-session.jpg" alt="App session plan"></div>
+  </div>
 </div></section>
-<footer><div class="wrap"><span>© Total Reformation</span><span>info@totalreformation.com</span></div></footer>
+
+<footer><div class="wrap">
+  <div><b>Total Reformation</b>Human performance &amp; optimisation. Training, remedial massage and online programs.</div>
+  <div><b>Studio</b>160 Martin Street<br>Brighton VIC 3186</div>
+  <div><b>Contact</b>0409 940 121<br>info@totalreformation.com</div>
+</div></footer>
+
 <script src="../assets/concept-bar.js"></script>
-<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.fd').forEach(e=>io.observe(e));</script>
+<script>
+const V='../assets/video/';
+const AREAS={
+ neck:{n:'Neck & shoulders',x:100,y:84,clip:'wall-retraction',ct:'Wall retraction',
+  why:['Forward head and rounded shoulders','Tight chest, under-used upper back','Screen and desk posture'],
+  how:['Posture photos to see head and shoulder position','Release the chest and upper traps','Retrain retraction and breathing'],
+  s:'Private session · 45 min',ss:'$85 · assessment included'},
+ core:{n:'Core',x:100,y:150,clip:'tva-activation',ct:'TVA introduction',
+  why:['Deep core (TVA) not switching on','Bracing or holding the breath','Ribs flaring, pelvis tipping'],
+  how:['Find and feel the transverse abdominis','Connect breath to core control','Build it into standing and loaded moves'],
+  s:'REFORM online program',ss:'$180 · 30-day foundations'},
+ lowback:{n:'Lower back',x:100,y:200,clip:'pelvic-tilt',ct:'Pelvic position',
+  why:['Pelvis tilted too far forward or back','Hips and glutes not sharing the load','Old injuries changing how you move'],
+  how:['Assess pelvic position and gait','Release hip flexors and fascia','Retrain neutral pelvis under load'],
+  s:'Treat & Train · 60 min',ss:'$120 · massage + training, health fund claimable'},
+ hips:{n:'Hips',x:76,y:240,clip:'pelvic-shift',ct:'Pelvic shift',l:1,
+  why:['Pelvis shifted to one side','Weak or sleepy glutes','Uneven stride in walking'],
+  how:['Gait analysis to spot the shift','Release tight lateral hip tissue','Rebuild single-leg control'],
+  s:'Private session · 45 min',ss:'$85 · assessment included'},
+ knees:{n:'Knees',x:116,y:334,clip:'rotation-flow',ct:'Knee drive + rotation',
+  why:['Knee caving in on lunges and stairs','Hips and feet not controlling the knee','Rotation missing from training'],
+  how:['Check foot and hip mechanics, not just the knee','Release quads and outer thigh','Train 3D lunge and rotation patterns'],
+  s:'Customised group · 45 min',ss:'$45 · your own program, small group'},
+ feet:{n:'Feet & ankles',x:82,y:418,clip:'box-mobility',ct:'Fascial ball intro',l:1,
+  why:['Collapsed or rigid arches','Stiff ankles changing your gait','Shoes doing the work your feet should'],
+  how:['Barefoot gait analysis','Fascial release under the foot and calf','Strengthen the arch and ankle'],
+  s:'Remedial massage · 60 min',ss:'$100 · with Emma'}
+};
+const $=s=>document.querySelector(s),fig=$('#map-fig'),chips=$('#chips'),panel=$('#panel');
+let cur=null;
+function select(id,user){if(id===cur)return;cur=id;const a=AREAS[id];
+ document.querySelectorAll('[data-area]').forEach(e=>e.classList.toggle('on',e.dataset.area===id));
+ const v=$('#pv');v.poster=V+a.clip+'.jpg';v.src=V+a.clip+'.mp4';v.play().catch(()=>{});
+ $('#pvT').textContent=a.ct;$('#pk').textContent='Body map · '+a.n;$('#ph').textContent=a.n;
+ $('#pl').innerHTML=a.why.map(x=>'<li>'+x+'</li>').join('');$('#po').innerHTML=a.how.map(x=>'<li>'+x+'</li>').join('');
+ $('#ps').textContent=a.s;$('#pss').textContent=a.ss;
+ panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');
+ if(user&&innerWidth<860)panel.scrollIntoView({behavior:'smooth',block:'start'})}
+for(const[id,a]of Object.entries(AREAS)){
+ const c=document.createElement('button');c.textContent=a.n;c.dataset.area=id;c.setAttribute('role','tab');c.onclick=()=>select(id,true);chips.appendChild(c);
+ const h=document.createElement('button');h.className='hot'+(a.l?' l':'');h.dataset.area=id;h.style.left=(a.x/200*100)+'%';h.style.top=(a.y/440*100)+'%';
+ h.setAttribute('aria-label',a.n);h.innerHTML='<span>'+a.n+'</span>';h.onclick=()=>select(id,true);fig.appendChild(h)}
+select('lowback');
+// finder
+const ans={why:'pain',how:'private'};
+const REC={private:{t:'Private assessment',p:'$85',u:'/ 45 min',d:'One-on-one with Darren or Emma: posture, gait and your first corrections.'},
+ group:{t:'Customised group',p:'$45',u:'/ 45 min',d:'Small-group energy with your own program. Mornings, Monday to Saturday.'},
+ online:{t:'REFORM online',p:'$180',u:'/ 30 days',d:'Follow-along video course on the fundamentals, from home.'},
+ hands:{t:'Treat & Train',p:'$120',u:'/ 60 min',d:'30 minutes of remedial massage with Emma, then 30 minutes of corrective training.'}};
+const WHY={pain:'With pain, we always find out why it hurts before anything gets loaded.',
+ perf:'For performance we check your mechanics first, then add load, speed and power on top.',
+ health:'We look at the whole picture: movement, nutrition, sleep and stress.',
+ recover:'Hands-on release plus movement keeps recovery moving forward.'};
+function rec(){let r=REC[ans.how];if(ans.why==='pain'&&ans.how==='group')r={...REC.private,d:'With pain, we suggest one private assessment first, then you can join the group with your own program.'};
+ if(ans.why==='recover'&&ans.how!=='hands')r=REC.hands;
+ $('#rT').textContent=r.t;$('#rP').innerHTML=r.p+'<small>'+r.u+'</small>';$('#rD').textContent=r.d+' '+WHY[ans.why]}
+document.querySelectorAll('.opts').forEach(g=>g.querySelectorAll('button').forEach(b=>b.onclick=()=>{g.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');ans[g.dataset.q]=b.dataset.v;rec()}));
+rec();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
+</script>
 </body>
 </html>

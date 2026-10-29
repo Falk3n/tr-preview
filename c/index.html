@@ -6,47 +6,92 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0F3B3A">
 <title>Total Reformation · Concept C · Body map</title>
+<meta name="description" content="Concept C: tap where it hurts. Interactive body-map redesign for Total Reformation, with 11 colour themes.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Total Reformation · Concept C · Body map">
+<meta property="og:description" content="Concept C: tap where it hurts. Interactive body-map redesign for Total Reformation, with 11 colour themes.">
+<meta property="og:url" content="https://falk3n.github.io/tr-preview/c/">
+<meta property="og:image" content="https://falk3n.github.io/tr-preview/assets/img/og.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/img/favicon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/concept-bar.css">
 <style>
-:root{--teal:#0F3B3A;--teal2:#16504E;--sand:#EDE6D8;--sand2:#E2D8C5;--mint:#9FE2C5;--mint2:#D7F3E6;--ink:#0B2423;--mute:#5E6F6B;--line:#CFC6B4;--card:#F7F3EA;
+:root{--teal:#0F3B3A;--teal2:#16504E;--sand:#EDE6D8;--sand2:#E2D8C5;--mint:#9FE2C5;--mint2:#D7F3E6;--ink:#0B2423;--mute:#51625E;--line:#CFC6B4;--card:#F7F3EA;
 --disp:"Bricolage Grotesque",system-ui,sans-serif;--sans:"Manrope",system-ui,sans-serif;
 --on:#EDE6D8;--onsoft:#cfe0dc;--onmute:#bcd3ce;--chipline:#3c6c69;--fig:#1E5A57;--glow:159,226,197;--capbg:rgba(11,36,35,.75);
 --tl1:var(--teal);--tl2:var(--teal2);--tl3:#3F8F7C;--tl4:#6CC3A0;--body2:#3c4d4a;--panel:var(--sand);--sel:var(--teal);--selon:var(--on);--hl:var(--mint);
 --btn:var(--teal);--btnon:var(--on);--herobg:var(--teal)}
-/* ---------- themes (picker bottom-right) ---------- */
+/* ---------- themes (dropdown next to the logo) ----------
+   Rule from the research: one signature accent, used loudly on the hotspots, highlight and Book button, starved elsewhere.
+   --gl = strength of the accent glow behind the hero (all themes). */
+:root{--gl:.20}
+/* refreshed originals */
+:root{--teal:#0B3433;--teal2:#0B6B5E;--mint:#5EF0B8;--mint2:#D4F7E8;--hl:#9DF5D2;
+--herobg:radial-gradient(75% 60% at 18% 78%,#145A52 0%,#0B3433 62%)}
 html[data-theme=synth]{--teal:#22093D;--teal2:#36F1CD;--sand:#140827;--sand2:#24103F;--mint:#FF4FB0;--mint2:#1E0D36;--ink:#F4ECFF;--mute:#A796CC;--line:#3B2563;--card:#1D0D35;
---on:#F7EEFF;--onsoft:#D6C8F0;--onmute:#B3A3D6;--chipline:#5B3A8C;--fig:#3A1366;--glow:255,79,176;--capbg:rgba(20,8,39,.78);
+--on:#F7EEFF;--onsoft:#D6C8F0;--onmute:#B3A3D6;--chipline:#5B3A8C;--fig:#3A1366;--glow:255,79,176;--capbg:rgba(20,8,39,.78);--gl:0;
 --tl1:#6D4BFF;--tl2:#36F1CD;--tl3:#B44CFF;--tl4:#FF7A59;--body2:#CFC1EA;--panel:#1D0D35;--sel:#FF4FB0;--selon:#140827;--hl:rgba(255,79,176,.38);
 --btn:linear-gradient(90deg,#FF4FB0,#9B4DFF);--btnon:#fff;--herobg:linear-gradient(180deg,#0B0219 0%,#250A47 52%,#4D1263 100%)}
-html[data-theme=coral]{--teal:#0E1B2E;--teal2:#D9482C;--sand:#F3F4F6;--sand2:#E4E7EC;--mint:#FF7A59;--mint2:#FFE9E1;--ink:#0E1B2E;--mute:#5D6778;--line:#D3D8E0;--card:#FFFFFF;
---on:#F3F4F6;--onsoft:#C9D1DE;--onmute:#9FAABD;--chipline:#33435E;--fig:#1D3150;--glow:255,122,89;--capbg:rgba(14,27,46,.78);
---tl3:#5872A0;--tl4:#FFA088;--body2:#3B4658;--hl:#FFD5C8}
-html[data-theme=cobalt]{--teal:#16181D;--teal2:#2F5BFF;--sand:#ECECEA;--sand2:#DEDEDB;--mint:#8AA6FF;--mint2:#E1E8FF;--ink:#111318;--mute:#5F636B;--line:#CFCFCB;--card:#F8F8F6;
---on:#F2F2F0;--onsoft:#C8CAD0;--onmute:#9DA1AA;--chipline:#3A3E47;--fig:#2A2E37;--glow:138,166,255;--capbg:rgba(22,24,29,.78);
---tl3:#5A6B95;--tl4:#8AA6FF;--body2:#3D4047;--hl:#C9D6FF}
+html[data-theme=coral]{--teal:#0B1626;--teal2:#C93A1C;--sand:#F3F4F6;--sand2:#E4E7EC;--mint:#FF6B4A;--mint2:#FFE6DD;--ink:#0B1626;--mute:#5D6778;--line:#D3D8E0;--card:#FFFFFF;
+--on:#F3F4F6;--onsoft:#C9D1DE;--onmute:#9FAABD;--chipline:#33435E;--fig:#1A2E4D;--glow:255,107,74;--capbg:rgba(11,22,38,.78);
+--tl3:#5872A0;--tl4:#FFA088;--body2:#3B4658;--hl:#FFCDBE;--herobg:radial-gradient(75% 60% at 18% 78%,#1E2F4F 0%,#0B1626 62%)}
+html[data-theme=cobalt]{--teal:#0F1115;--teal2:#2450F0;--sand:#ECECEA;--sand2:#DEDEDB;--mint:#5B86FF;--mint2:#DFE7FF;--ink:#0F1115;--mute:#5F636B;--line:#CFCFCB;--card:#F8F8F6;
+--on:#F2F2F0;--onsoft:#C8CAD0;--onmute:#9DA1AA;--chipline:#3A3E47;--fig:#252A35;--glow:91,134,255;--capbg:rgba(15,17,21,.78);
+--tl3:#5A6B95;--tl4:#8AA6FF;--body2:#3D4047;--hl:#C4D3FF;--herobg:radial-gradient(75% 60% at 18% 78%,#16244F 0%,#0F1115 62%)}
 /* Arctic: the one light-hero theme */
-html[data-theme=arctic]{--teal:#0E2A3B;--teal2:#0B7FA3;--sand:#F2F6F9;--sand2:#E3EBF1;--mint:#3CC8E8;--mint2:#DDF3FA;--ink:#0E2A3B;--mute:#5B6F7D;--line:#CFDCE5;--card:#FFFFFF;
---on:#F2F6F9;--onsoft:#C3D3DE;--onmute:#93A9B8;--chipline:#B7CAD6;--fig:#D3E3EC;--glow:11,154,196;--capbg:rgba(14,42,59,.78);
+html[data-theme=arctic]{--teal:#0E2A3B;--teal2:#0A7799;--sand:#F2F6F9;--sand2:#E3EBF1;--mint:#12B8E0;--mint2:#DDF3FA;--ink:#0E2A3B;--mute:#5B6F7D;--line:#CFDCE5;--card:#FFFFFF;
+--on:#F2F6F9;--onsoft:#C3D3DE;--onmute:#93A9B8;--chipline:#B7CAD6;--fig:#D3E3EC;--glow:18,184,224;--capbg:rgba(14,42,59,.78);--gl:.12;
 --tl3:#5AA9C6;--tl4:#9ADCEC;--body2:#3A4E5C;--hl:#BDEBF7;--herobg:linear-gradient(180deg,#FAFCFD 0%,#E2EDF3 100%)}
 html[data-theme=arctic] nav.top{background:rgba(255,255,255,.92);color:#0E2A3B;box-shadow:0 1px 0 #D5E1E9}
 html[data-theme=arctic] .hero{color:#0E2A3B}
-html[data-theme=arctic] .hero .k{color:#0B7FA3}
-html[data-theme=arctic] h1 span{color:#0B9AC4}
+html[data-theme=arctic] .hero .k{color:#0A7799}
+html[data-theme=arctic] h1 span{color:#0A93BD}
 html[data-theme=arctic] .hero .intro p{color:#3A4E5C}
 html[data-theme=arctic] .chips button{color:#0E2A3B;border-color:#B7CAD6}
 html[data-theme=arctic] .chips button.on{background:#0E2A3B;color:#fff;border-color:#0E2A3B}
-html[data-theme=arctic] .map .spiral{stroke:#0B9AC4}
-html[data-theme=arctic] .hot span{color:#0B7FA3}
-html[data-theme=arctic] .hot:before{background:#0B9AC4}
+html[data-theme=arctic] .map .spiral{stroke:#0A93BD}
+html[data-theme=arctic] .hot span{color:#0A7799}
+html[data-theme=arctic] .hot:before{background:#0A93BD}
 html[data-theme=arctic] .hot.on:before{background:#0E2A3B}
 html[data-theme=arctic] .panel{background:#fff;box-shadow:0 24px 60px rgba(14,42,59,.14)}
 /* Ember: charcoal with amber glow */
-html[data-theme=ember]{--teal:#191512;--teal2:#A8650F;--sand:#F4EFE8;--sand2:#E7DFD4;--mint:#FFB547;--mint2:#FCEBD0;--ink:#191512;--mute:#6F645B;--line:#DDD2C4;--card:#FBF8F3;
---on:#F7F1E8;--onsoft:#D8CCBF;--onmute:#AA9C8E;--chipline:#4A3F35;--fig:#3A3029;--glow:255,181,71;--capbg:rgba(25,21,18,.8);
---tl3:#D98E2B;--tl4:#FFD08A;--body2:#463B33;--hl:#FFE0AE;--herobg:radial-gradient(80% 70% at 78% 75%,#3E2B12 0%,#191512 62%)}
+html[data-theme=ember]{--teal:#171310;--teal2:#9A5A08;--sand:#F4EFE8;--sand2:#E7DFD4;--mint:#FFB02E;--mint2:#FCEBD0;--ink:#171310;--mute:#6F645B;--line:#DDD2C4;--card:#FBF8F3;
+--on:#F7F1E8;--onsoft:#D8CCBF;--onmute:#AA9C8E;--chipline:#4A3F35;--fig:#3A3029;--glow:255,176,46;--capbg:rgba(23,19,16,.8);
+--tl3:#D98E2B;--tl4:#FFD08A;--body2:#463B33;--hl:#FFDDA3;--herobg:radial-gradient(80% 70% at 22% 78%,#4A3210 0%,#171310 62%)}
+/* ---------- new, research-led ---------- */
+/* Copper: bone and bronze. Anatomy-table warmth; nobody in the category owns copper (Equinox restraint + Oura sandstone). */
+html[data-theme=copper]{--teal:#15110E;--teal2:#9C4E1C;--sand:#F4EEE6;--sand2:#E9DFD2;--mint:#E8894A;--mint2:#F7E4D3;--ink:#1A1410;--mute:#6E6158;--line:#DDCFBF;--card:#FFFBF5;
+--on:#F5EEE4;--onsoft:#D9CBBC;--onmute:#AE9D8D;--chipline:#4A3B30;--fig:#3B2D23;--glow:232,137,74;--capbg:rgba(21,17,14,.8);
+--tl3:#8A9A8B;--tl4:#F0B07F;--body2:#4A3D34;--hl:#F6C9A6;--herobg:radial-gradient(75% 65% at 20% 80%,#4A2A16 0%,#15110E 62%)}
+/* Volt: graphite and phosphor. Oscilloscope/lab energy (Ladder, Othership chartreuse) without WHOOP's teal. */
+html[data-theme=volt]{--teal:#0E1114;--teal2:#2D5B69;--sand:#EEF1F3;--sand2:#DFE4E8;--mint:#D6FF3D;--mint2:#EEFFC2;--ink:#0E1114;--mute:#5C666E;--line:#CED6DC;--card:#FFFFFF;
+--on:#E8EEF2;--onsoft:#BFC9D0;--onmute:#8F9BA4;--chipline:#2F3942;--fig:#27323B;--glow:214,255,61;--capbg:rgba(14,17,20,.8);--gl:.14;
+--tl1:#0E1114;--tl2:#2D5B69;--tl3:#7FA83A;--tl4:#D6FF3D;--body2:#3A444C;--hl:#E2FF7A;--sel:#0E1114;--herobg:radial-gradient(70% 60% at 20% 80%,#1D2A1A 0%,#0E1114 60%)}
+html[data-theme=volt] h1 span{text-shadow:0 0 30px rgba(214,255,61,.35)}
+/* Iris: night and violet. Violet is nearly unused in fitness; reads as nervous system / movement science (Ready State's ultramarine, softened). */
+html[data-theme=iris]{--teal:#16141C;--teal2:#5B3BD6;--sand:#F4F2F7;--sand2:#E6E2EE;--mint:#9F82FF;--mint2:#ECE6FF;--ink:#16141C;--mute:#625D6E;--line:#D9D4E3;--card:#FFFFFF;
+--on:#F4F2F7;--onsoft:#CAC4D8;--onmute:#9C95AD;--chipline:#3A3450;--fig:#322B4A;--glow:159,130,255;--capbg:rgba(22,20,28,.8);
+--tl1:#5B3BD6;--tl2:#7C5CFF;--tl3:#9AA7A0;--tl4:#C7B6FF;--body2:#3F3A4C;--hl:#D9CEFF;--herobg:radial-gradient(75% 60% at 20% 78%,#2E2163 0%,#16141C 62%)}
+/* Aubergine: Othership-style sauna palette. Plum dusk, chartreuse accent, seafoam and orchid in the details. */
+html[data-theme=aubergine]{--teal:#24152A;--teal2:#6B2F66;--sand:#F2EDE7;--sand2:#E6DED5;--mint:#DBF572;--mint2:#EEF7CF;--ink:#24152A;--mute:#6B5C68;--line:#DCD1C8;--card:#FFFCF8;
+--on:#F3EDF0;--onsoft:#D3C3CF;--onmute:#A895A4;--chipline:#4B3350;--fig:#46294D;--glow:219,245,114;--capbg:rgba(36,21,42,.8);--gl:.12;
+--tl1:#372338;--tl2:#CB72C4;--tl3:#A7CFC9;--tl4:#DBF572;--body2:#4A3A47;--hl:#E6F7A6;--herobg:linear-gradient(170deg,#1A0F1E 0%,#372338 70%,#4A2D45 100%)}
+/* Infrared: red-light-therapy glow (TR already recommends red light). Hotter than Barry's red, with an orange heat gradient. */
+html[data-theme=infrared]{--teal:#0E0807;--teal2:#C2261A;--sand:#F6F1EF;--sand2:#EADFDB;--mint:#FF4D2E;--mint2:#FFE3DA;--ink:#140B0A;--mute:#6E5F5C;--line:#E2D3CE;--card:#FFFFFF;
+--on:#FBF2EF;--onsoft:#E2C9C3;--onmute:#B39892;--chipline:#4A2522;--fig:#3F1A15;--glow:255,77,46;--capbg:rgba(14,8,7,.8);--gl:.28;
+--tl1:#FF2E2E;--tl2:#FF5A1F;--tl3:#FF8A00;--tl4:#FFC14D;--body2:#4A3734;--hl:#FFC8B8;
+--btn:linear-gradient(90deg,#FF2E2E,#FF8A00);--btnon:#fff;--herobg:radial-gradient(70% 70% at 20% 85%,#5C0F08 0%,#2A0805 38%,#0E0807 70%)}
+html[data-theme=infrared] h1 span{background:linear-gradient(90deg,#FF2E2E,#FF8A00);-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-theme=infrared] .btn.mint{background:linear-gradient(90deg,#FF2E2E,#FF8A00);color:#fff}
+/* universal pop: accent glow behind the body map, glowing hotspots, accent-lit Book button */
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(42% 46% at 22% 72%,rgba(var(--glow),var(--gl)),transparent 70%)}
+.hot:before{box-shadow:0 0 14px rgba(var(--glow),.55)}
+.map .body{stroke:rgba(var(--glow),.3);stroke-width:1}
+nav.top .btn.mint{box-shadow:0 0 0 0 rgba(var(--glow),0);transition:box-shadow .3s}
+nav.top .btn.mint:hover{box-shadow:0 0 22px rgba(var(--glow),.5)}
 /* synthwave extras: sun, neon grid floor, glow */
 .synthfx{display:none;position:absolute;inset:0;pointer-events:none;z-index:0;background:radial-gradient(1.5px 1.5px at 12% 18%,#fff8,transparent),radial-gradient(1px 1px at 34% 9%,#fff9,transparent),radial-gradient(1.5px 1.5px at 58% 22%,#fff7,transparent),radial-gradient(1px 1px at 76% 12%,#fffa,transparent),radial-gradient(1.5px 1.5px at 90% 30%,#fff6,transparent),radial-gradient(1px 1px at 46% 34%,#fff8,transparent)}
 html[data-theme=synth] .synthfx{display:block}
@@ -73,6 +118,7 @@ html[data-theme=synth] .btn.mint{box-shadow:0 0 22px rgba(255,79,176,.55)}
 html[data-theme=synth] footer{background:#0B0219}
 html[data-theme=synth] .panel ol li:before{background:#FF4FB0;color:#140827}
 html[data-theme=synth] .opts button{background:#24103F}
+html[data-theme=synth] .opts button.on{background:#FF4FB0;color:#140827;border-color:#FF4FB0}
 .hero .panel .k{color:var(--teal2)}
 @media(prefers-reduced-motion:reduce){.synthfx .grid{animation:none}}
 /* theme dropdown (next to the logo) */
@@ -83,8 +129,12 @@ html[data-theme=synth] .opts button{background:#24103F}
 .tbtn[aria-expanded=true] svg{transform:rotate(180deg)}
 .tmenu{position:absolute;top:calc(100% + 12px);left:0;min-width:210px;margin:0;padding:6px;list-style:none;background:#111;border:1px solid #2a2a2a;border-radius:14px;box-shadow:0 18px 44px rgba(0,0,0,.4);z-index:40;transform-origin:top left;animation:menuin .18s ease}
 .tmenu[hidden]{display:none}
+.tmenu{max-height:min(560px,calc(100dvh - 90px));overflow-y:auto;overscroll-behavior:contain}
+.tmenu .tgrp{padding:10px 12px 4px;font:700 10.5px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#8a8a8a}
+.tmenu .tgrp:not(:first-child){margin-top:4px;border-top:1px solid #262626;padding-top:12px}
+
 @keyframes menuin{from{opacity:0;transform:translateY(-6px) scale(.97)}}
-.tmenu button{display:flex;align-items:center;gap:11px;width:100%;padding:11px 12px;border:0;border-radius:9px;background:none;font:700 15.5px var(--sans);color:var(--c);text-align:left;letter-spacing:.01em}
+.tmenu button{display:flex;align-items:center;gap:11px;width:100%;padding:11px 12px;border:0;border-radius:9px;background:none;font:700 15.5px var(--sans);color:var(--c);text-align:left;letter-spacing:.01em;padding-top:9px;padding-bottom:9px}
 .tmenu button:hover,.tmenu button[aria-checked=true]{background:#1e1e1e}
 .tmenu button i{width:14px;height:14px;border-radius:50%;flex:none;background:conic-gradient(var(--a) 0 50%,var(--b) 0);box-shadow:0 0 0 1px rgba(255,255,255,.25)}
 .tmenu button[aria-checked=true]::after{content:"✓";margin-left:auto;color:#fff;font-size:13px}
@@ -253,7 +303,7 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}footer b{
         <h2 id="ph"></h2>
         <h4>Often linked to</h4><ul id="pl"></ul>
         <h4>How we'd work on it</h4><ol id="po"></ol>
-        <div class="sugg"><div><b id="ps"></b><span id="pss"></span></div><a class="btn" href="#finder">Book</a></div>
+        <div class="sugg"><div><b id="ps"></b><span id="pss"></span></div><a class="btn" href="#finder" id="psb" data-concept="">Book</a></div>
         <p class="disc">General guidance, not a diagnosis. Your assessment decides your plan.</p>
       </div>
     </article>
@@ -285,7 +335,7 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}footer b{
     </div>
     <div class="result" id="res">
       <div class="k">We'd suggest</div><h3 id="rT"></h3><div class="pr" id="rP"></div><p id="rD"></p>
-      <a class="btn mint" href="#">Book this</a>
+      <a class="btn mint" href="#finder" id="rBook" data-concept="">Book this</a>
     </div>
   </div>
 </div></section>
@@ -313,27 +363,35 @@ footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:24px}footer b{
 <footer><div class="wrap">
   <div><b>Total Reformation</b>Human performance &amp; optimisation. Training, remedial massage and online programs.</div>
   <div><b>Studio</b>160 Martin Street<br>Brighton VIC 3186</div>
-  <div><b>Contact</b>0409 940 121<br>info@totalreformation.com</div>
+  <div><b>Contact</b><a href="tel:0409940121">0409 940 121</a><br><a href="mailto:info@totalreformation.com">info@totalreformation.com</a><br><a href="https://www.instagram.com/totalreformation" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/totalreformationaustralia" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.youtube.com/totalreformation" target="_blank" rel="noopener">YouTube</a></div>
 </div></footer>
 
 <script src="../assets/concept-bar.js"></script>
 <script>
 // Theme dropdown next to the logo. Each name is written in its own colour. Remembered on this device; ?theme=<id> also works.
 const THEMES=[
- {id:'lagoon',n:'Lagoon',a:'#0F3B3A',b:'#9FE2C5',c:'#9FE2C5',meta:'#0F3B3A'},
+ {g:'New · research-led'},
+ {id:'copper',n:'Copper',a:'#15110E',b:'#E8894A',c:'#F0A06A',meta:'#15110E'},
+ {id:'volt',n:'Volt',a:'#0E1114',b:'#D6FF3D',c:'#D6FF3D',meta:'#0E1114'},
+ {id:'iris',n:'Iris',a:'#16141C',b:'#9F82FF',c:'#B39CFF',meta:'#16141C'},
+ {id:'aubergine',n:'Aubergine',a:'#372338',b:'#DBF572',c:'#DBF572',meta:'#24152A'},
+ {id:'infrared',n:'Infrared',a:'#2A0805',b:'#FF4D2E',c:'#FF6A45',meta:'#0E0807'},
+ {g:'Originals · refreshed'},
+ {id:'lagoon',n:'Lagoon',a:'#0B3433',b:'#5EF0B8',c:'#5EF0B8',meta:'#0B3433'},
  {id:'synth',n:'Synth',a:'#22093D',b:'#FF4FB0',c:'#FF5DB8',meta:'#0B0219'},
- {id:'coral',n:'Coral',a:'#0E1B2E',b:'#FF7A59',c:'#FF8A6B',meta:'#0E1B2E'},
- {id:'cobalt',n:'Cobalt',a:'#16181D',b:'#2F5BFF',c:'#7C9BFF',meta:'#16181D'},
- {id:'arctic',n:'Arctic',a:'#E2EDF3',b:'#0B9AC4',c:'#5FD3EE',meta:'#F2F6F9'},
- {id:'ember',n:'Ember',a:'#191512',b:'#FFB547',c:'#FFB547',meta:'#191512'}];
+ {id:'coral',n:'Coral',a:'#0B1626',b:'#FF6B4A',c:'#FF8A6B',meta:'#0B1626'},
+ {id:'cobalt',n:'Cobalt',a:'#0F1115',b:'#5B86FF',c:'#7C9BFF',meta:'#0F1115'},
+ {id:'arctic',n:'Arctic',a:'#E2EDF3',b:'#0A93BD',c:'#5FD3EE',meta:'#F2F6F9'},
+ {id:'ember',n:'Ember',a:'#171310',b:'#FFB02E',c:'#FFB02E',meta:'#171310'}];
 const tbtn=document.getElementById('tbtn'),tmenu=document.getElementById('tmenu');
-function setTheme(id,save){const t=THEMES.find(x=>x.id===id)||THEMES[0];
+function setTheme(id,save){const t=THEMES.find(x=>x.id&&x.id===id)||THEMES.find(x=>x.id==='lagoon');
  if(t.id==='lagoon')document.documentElement.removeAttribute('data-theme');else document.documentElement.dataset.theme=t.id;
  document.querySelector('meta[name=theme-color]').content=t.meta;
  tbtn.style.setProperty('--a',t.a);tbtn.style.setProperty('--b',t.b);tbtn.setAttribute('aria-label','Colour theme: '+t.n);
  tmenu.querySelectorAll('button').forEach(b=>b.setAttribute('aria-checked',b.dataset.t===t.id));
  if(save)try{localStorage.setItem('tr-c-theme',t.id)}catch(e){}}
-THEMES.forEach(t=>{const li=document.createElement('li'),b=document.createElement('button');b.dataset.t=t.id;b.setAttribute('role','menuitemradio');
+THEMES.forEach(t=>{if(t.g){const h=document.createElement('li');h.className='tgrp';h.setAttribute('role','presentation');h.textContent=t.g;tmenu.appendChild(h);return}
+ const li=document.createElement('li'),b=document.createElement('button');b.dataset.t=t.id;b.setAttribute('role','menuitemradio');
  b.style.setProperty('--a',t.a);b.style.setProperty('--b',t.b);b.style.setProperty('--c',t.c);b.innerHTML='<i></i>'+t.n;
  b.onclick=()=>{setTheme(t.id,true);menu(false)};li.appendChild(b);tmenu.appendChild(li)});
 function menu(open){tmenu.hidden=!open;tbtn.setAttribute('aria-expanded',open)}
@@ -379,7 +437,7 @@ function select(id,user){if(id===cur)return;cur=id;const a=AREAS[id];
  const v=$('#pv');v.poster=V+a.clip+'.jpg';v.src=V+a.clip+'.mp4';v.play().catch(()=>{});
  $('#pvT').textContent=a.ct;$('#pk').textContent='Body map · '+a.n;$('#ph').textContent=a.n;
  $('#pl').innerHTML=a.why.map(x=>'<li>'+x+'</li>').join('');$('#po').innerHTML=a.how.map(x=>'<li>'+x+'</li>').join('');
- $('#ps').textContent=a.s;$('#pss').textContent=a.ss;
+ $('#ps').textContent=a.s;$('#psb').dataset.concept=a.s;$('#pss').textContent=a.ss;
  panel.classList.remove('swap');void panel.offsetWidth;panel.classList.add('swap');
  if(user&&innerWidth<860)panel.scrollIntoView({behavior:'smooth',block:'start'})}
 for(const[id,a]of Object.entries(AREAS)){
@@ -399,7 +457,7 @@ const WHY={pain:'With pain, we always find out why it hurts before anything gets
  recover:'Hands-on release plus movement keeps recovery moving forward.'};
 function rec(){let r=REC[ans.how];if(ans.why==='pain'&&ans.how==='group')r={...REC.private,d:'With pain, we suggest one private assessment first, then you can join the group with your own program.'};
  if(ans.why==='recover'&&ans.how!=='hands')r=REC.hands;
- $('#rT').textContent=r.t;$('#rP').innerHTML=r.p+'<small>'+r.u+'</small>';$('#rD').textContent=r.d+' '+WHY[ans.why]}
+ $('#rT').textContent=r.t;$('#rBook').dataset.concept=r.t;$('#rP').innerHTML=r.p+'<small>'+r.u+'</small>';$('#rD').textContent=r.d+' '+WHY[ans.why]}
 document.querySelectorAll('.opts').forEach(g=>g.querySelectorAll('button').forEach(b=>b.onclick=()=>{g.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');ans[g.dataset.q]=b.dataset.v;rec()}));
 rec();
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(e=>io.observe(e));

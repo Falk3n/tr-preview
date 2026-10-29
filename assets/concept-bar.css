@@ -5,3 +5,5 @@
 @media(max-width:560px){.cbar a{padding:10px 15px;font-size:13.5px}}
 .cbar a:hover:not(.on){color:#fff}
 @media print{.cbar{display:none}}
+.cnote{position:fixed;left:50%;top:calc(14px + env(safe-area-inset-top));transform:translate(-50%,-140%);z-index:10000;max-width:min(520px,calc(100vw - 24px));padding:12px 16px;border-radius:14px;background:rgba(18,18,18,.92);color:#fff;font:500 14px/1.4 system-ui,-apple-system,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.3);transition:transform .35s cubic-bezier(.2,.8,.2,1);pointer-events:none;text-align:center}
+.cnote.on{transform:translate(-50%,0)}

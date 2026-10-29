@@ -23,4 +23,16 @@
     bar.appendChild(a);
   }
   document.body.appendChild(bar);
+
+  // Booking buttons in the concepts: show what a live site would do instead of silently doing nothing.
+  const note = document.createElement('div');
+  note.className = 'cnote'; note.setAttribute('role', 'status'); note.setAttribute('aria-live', 'polite');
+  document.body.appendChild(note);
+  let h;
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-concept]'); if (!el) return;
+    const what = el.dataset.concept || el.textContent.trim();
+    note.textContent = 'Concept preview: on the live site this opens booking for ' + what + '.';
+    note.classList.add('on'); clearTimeout(h); h = setTimeout(() => note.classList.remove('on'), 3200);
+  });
 })();

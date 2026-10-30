@@ -242,6 +242,8 @@ addEventListener('storage',e=>{if(e.key===KEY){plan=JSON.parse(e.newValue);rende
 
 const $=s=>document.querySelector(s),dev=$('#dev');
 const embed=new URLSearchParams(location.search).has('embed');if(embed)document.body.classList.add('embed');
+// Match Design A's colour theme when embedded there (?accent=blaze|uv); default stays Volt yellow.
+{const ACC={blaze:'#FF6A2A',uv:'#B07CFF'}[new URLSearchParams(location.search).get('accent')];if(ACC)document.documentElement.style.setProperty('--acc',ACC)}
 const now=new Date();
 const fmt=(d,o)=>d.toLocaleDateString('en-AU',o);
 const nextDate=new Date(now);nextDate.setDate(now.getDate()+1);nextDate.setHours(10,0,0,0);

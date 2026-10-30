@@ -4,98 +4,243 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Total Reformation · Redesign concepts</title>
-<meta name="description" content="Three website directions and a client-app demo for Total Reformation, Brighton. Private concept preview.">
+<meta name="theme-color" content="#0A0A0A">
+<title>Total Reformation · A new website and client app</title>
+<meta name="description" content="A proposal for Total Reformation, Brighton: a new website built to book clients, plus a TR client app with Darren's exercise videos.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Total Reformation · Redesign concepts">
-<meta property="og:description" content="Three website directions and a client-app demo for Total Reformation, Brighton. Private concept preview.">
+<meta property="og:title" content="Total Reformation · A new website and client app">
+<meta property="og:description" content="A proposal for Total Reformation, Brighton: a new website built to book clients, plus a TR client app with Darren's exercise videos.">
 <meta property="og:url" content="https://falk3n.github.io/tr-preview/">
 <meta property="og:image" content="https://falk3n.github.io/tr-preview/assets/img/og.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/img/favicon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/concept-bar.css">
 <style>
-:root{--bg:#F4F3F0;--ink:#111;--mute:#6d6b66;--line:#dedbd4;--card:#fff;--acc:#B53A21}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:400 16.5px/1.55 "Inter Tight",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}img{max-width:100%;display:block}
-.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(18px,4vw,36px)}
-header{padding:clamp(36px,6vw,72px) 0 30px}
-.k{font:600 12px/1 "Inter Tight";letter-spacing:.16em;text-transform:uppercase;color:var(--acc)}
-h1{font:700 clamp(40px,6vw,76px)/.98 "Inter Tight";letter-spacing:-.035em;margin:14px 0 16px}
-.lede{max-width:40em;color:#3d3c39;font-size:18px}
-h2{font:700 30px/1.1 "Inter Tight";letter-spacing:-.02em;margin:0 0 6px}
-section{padding:34px 0}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:20px}
-.c{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;text-decoration:none;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
-.c:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,0,0,.08)}
-.c .sw{height:210px;position:relative;overflow:hidden}
-.c .sw img{width:100%;height:100%;object-fit:cover}
-.c .b{padding:18px 20px 22px}.c h3{margin:6px 0 6px;font:700 22px "Inter Tight";letter-spacing:-.01em}.c p{margin:0;color:var(--mute);font-size:15px}
-.chips{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}.chips span{font-size:12px;padding:5px 9px;border-radius:999px;background:var(--bg);color:#444}
-@media(max-width:760px){.grid{grid-template-columns:1fr}}
-.map{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:18px}
-.node{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
-.node b{display:block;margin-bottom:6px}.node small{display:block;color:var(--mute);font-size:13.5px;line-height:1.5}
-.node.new{border-color:var(--acc);box-shadow:inset 3px 0 0 var(--acc)}
-.flow{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:16px;font-size:14.5px}
-.flow span{background:var(--card);border:1px solid var(--line);padding:9px 13px;border-radius:10px}.flow i{color:var(--mute);font-style:normal}
-table{width:100%;border-collapse:collapse;background:var(--card);border-radius:14px;overflow:hidden;font-size:15px;margin-top:16px}
-td,th{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);font-weight:600}
-.note{font-size:13.5px;color:var(--mute);margin-top:10px}
-footer{padding:30px 0 110px;color:var(--mute);font-size:13.5px}
+:root{--bg:#0A0A0A;--bg2:#131313;--bg3:#1A1A1A;--fg:#F2F0EB;--soft:#C9C6BF;--mute:#9A978F;--line:#262626;--acc:#E8FF3A;
+--disp:"Archivo Narrow","Archivo",system-ui,sans-serif;--sans:"Archivo",system-ui,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.eb{font:700 12px/1 var(--disp);letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
+h1,h2{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:-.01em;margin:14px 0 0}
+h1{font-size:clamp(52px,8.6vw,128px);line-height:.86}
+h2{font-size:clamp(40px,5.6vw,80px);line-height:.9}
+h1 em,h2 em{font-style:normal;color:var(--acc)}
+p.lede{font-size:clamp(17px,1.6vw,20px);color:var(--soft);max-width:34em;margin:22px 0 0}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 24px;background:var(--acc);color:#0A0A0A;text-decoration:none;font:700 14px var(--disp);letter-spacing:.14em;text-transform:uppercase;clip-path:polygon(0 0,100% 0,100% 70%,92% 100%,0 100%)}
+.btn.ghost{background:transparent;color:var(--fg);outline:1px solid #444;outline-offset:-1px;clip-path:none}
+.btn svg{width:16px;height:16px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+section{padding:clamp(70px,9vw,120px) 0;border-top:1px solid var(--line)}
+/* nav */
+nav.top{position:sticky;top:0;z-index:20;background:rgba(10,10,10,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:800 14px var(--disp);letter-spacing:.24em}
+.logo i{width:32px;height:32px;display:grid;place-items:center;background:var(--fg);color:var(--bg);font:800 13px var(--sans);font-style:normal;letter-spacing:0}
+.for{font:600 12px var(--disp);letter-spacing:.18em;text-transform:uppercase;color:var(--mute)}
+nav.top .btn{padding:11px 16px;font-size:12px}
+@media(max-width:760px){.for{display:none}}
+@media(max-width:420px){.logo span{display:none}}
+/* hero */
+.hero{padding:clamp(40px,6vw,80px) 0 clamp(60px,8vw,100px);position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(55% 60% at 80% 40%,#2a1210 0%,transparent 70%);pointer-events:none}
+.hero .grid{position:relative;display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,70px);align-items:center}
+@media(max-width:960px){.hero .grid{grid-template-columns:1fr}}
+.devices{position:relative;padding:0 0 40px 0}
+.browser{background:#1a1a1a;border:1px solid #2e2e2e;border-radius:12px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 60px rgba(232,255,58,.06)}
+.browser .bar{height:28px;display:flex;align-items:center;gap:6px;padding:0 12px;background:#202020;border-bottom:1px solid #2e2e2e}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#3a3a3a}
+.browser .bar span{margin-left:10px;font:500 11px var(--sans);color:#888;background:#151515;border-radius:6px;padding:3px 10px}
+.phone{position:absolute;right:-8px;bottom:0;width:30%;max-width:190px;border-radius:26px;border:6px solid #1c1c1c;box-shadow:0 0 0 1px #333,0 30px 60px rgba(0,0,0,.7);overflow:hidden;background:#000}
+@media(max-width:960px){.phone{right:6px}}
+/* recommendation */
+.rec{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:start}
+@media(max-width:900px){.rec{grid-template-columns:1fr}}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--acc);color:#0A0A0A;font:700 12px var(--disp);letter-spacing:.18em;text-transform:uppercase;padding:8px 12px}
+.why{display:grid;gap:2px;background:var(--line);border:1px solid var(--line)}
+.why>div{background:var(--bg);padding:22px 22px 24px;display:grid;grid-template-columns:44px 1fr;gap:14px}
+.why b{display:block;font:700 21px/1.15 var(--disp);text-transform:uppercase;letter-spacing:.03em;margin-bottom:4px}
+.why span.n{font:700 30px/1 var(--disp);color:var(--acc)}
+.why p{margin:0;color:var(--soft);font-size:15.5px}
+/* colour options */
+.swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}
+.sw{text-decoration:none;background:var(--bg2);border:1px solid var(--line);display:flex;flex-direction:column;transition:transform .2s,border-color .2s}
+.sw:hover{transform:translateY(-3px);border-color:#444}
+.sw img{aspect-ratio:16/10;object-fit:cover;object-position:top left}
+.sw div{padding:14px 16px;display:flex;align-items:center;gap:10px;font:700 15px var(--disp);letter-spacing:.14em;text-transform:uppercase}
+.sw i{width:16px;height:16px;border-radius:50%;flex:none}
+.sw small{margin-left:auto;font:500 12px var(--sans);letter-spacing:0;text-transform:none;color:var(--mute)}
+@media(max-width:760px){.swatches{grid-template-columns:1fr}}
+/* wins */
+.wins{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:40px}
+.win{background:var(--bg2);border:1px solid var(--line);padding:22px}
+.win .was{font:700 12px var(--disp);letter-spacing:.16em;text-transform:uppercase;color:#FF7A6B}
+.win .now{font:700 12px var(--disp);letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-top:14px}
+.win p{margin:6px 0 0;color:var(--soft);font-size:15.5px}
+@media(max-width:760px){.wins{grid-template-columns:1fr}}
+/* app */
+.app{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+@media(max-width:900px){.app{grid-template-columns:1fr}}
+.live{width:min(320px,82vw);aspect-ratio:9/19.5;border-radius:46px;background:#000;border:10px solid #1c1c1c;box-shadow:0 0 0 1px #333,0 40px 80px rgba(232,255,58,.1);overflow:hidden;margin:auto}
+.live iframe{width:100%;height:100%;border:0;background:#0A0A0A}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+.feat div{border-top:2px solid var(--acc);padding-top:12px;color:var(--soft);font-size:15px}
+.feat b{display:block;color:var(--fg);font:700 18px var(--disp);text-transform:uppercase;letter-spacing:.06em}
+/* alternatives */
+.alts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:40px}
+.alt{display:grid;grid-template-columns:42% 1fr;background:var(--bg2);border:1px solid var(--line);text-decoration:none;transition:border-color .2s}
+.alt:hover{border-color:#444}
+.alt img{height:100%;width:100%;object-fit:cover;object-position:top left;min-height:170px}
+.alt div{padding:20px}
+.alt h3{font:700 26px/1 var(--disp);text-transform:uppercase;margin:8px 0}
+.alt p{margin:0;color:var(--soft);font-size:15px}
+.alt .eb{color:var(--mute)}
+@media(max-width:900px){.alts{grid-template-columns:1fr}}
+@media(max-width:520px){.alt{grid-template-columns:1fr}.alt img{aspect-ratio:16/9;min-height:0}}
+/* how */
+.how{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line);margin-top:40px}
+.how div{background:var(--bg);padding:26px}
+.how b{display:block;font:700 22px var(--disp);text-transform:uppercase;margin-bottom:6px}
+.how p{margin:0;color:var(--soft);font-size:15.5px}
+@media(max-width:860px){.how{grid-template-columns:1fr}}
+.map{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.map span{border:1px solid #333;padding:9px 13px;font:600 14px var(--sans);color:var(--soft)}
+.map span.new{border-color:var(--acc);color:var(--fg)}
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px;counter-reset:s}
+.st{border-top:3px solid var(--acc);padding-top:16px;counter-increment:s}
+.st:before{content:"0" counter(s);font:700 44px/1 var(--disp);color:#2e2e2e;display:block;margin-bottom:10px}
+.st b{display:block;font:700 20px var(--disp);text-transform:uppercase;margin-bottom:6px}
+.st p{margin:0;color:var(--soft);font-size:15px}
+@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.end{text-align:center;background:radial-gradient(50% 70% at 50% 100%,#232a00 0%,transparent 70%)}
+footer{border-top:1px solid var(--line);padding:30px 0 110px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<header><div class="wrap">
-  <div class="k">Concept preview · prepared for Darren &amp; Emma</div>
-  <h1>Total Reformation,<br>reimagined.</h1>
-  <p class="lede">Three design directions for a new totalreformation.com, plus a working concept of a TR client app where clients see their sessions and watch Darren demonstrate every exercise. It's all built from TR's own photos, words and videos.</p>
+<nav class="top"><div class="wrap">
+  <a class="logo" href="#"><i>TR</i><span>TOTAL REFORMATION</span></a>
+  <span class="for">Proposal · prepared for Darren &amp; Emma</span>
+  <a class="btn" href="a/">See the design</a>
+</div></nav>
+
+<header class="hero"><div class="wrap grid">
+  <div>
+    <div class="eb">A new totalreformation.com</div>
+    <h1>Built to <em>book</em><br>clients. Not just<br>look good.</h1>
+    <p class="lede">A faster, sharper website that keeps the dark Total Reformation look your clients already know, puts booking one tap away, and comes with its own TR app, where clients watch you demonstrate every exercise.</p>
+    <div class="cta"><a class="btn" href="a/">Open the recommended design <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a><a class="btn ghost" href="app/">Try the client app</a></div>
+  </div>
+  <div class="devices rv">
+    <div class="browser"><div class="bar"><i></i><i></i><i></i><span>totalreformation.com</span></div><img src="assets/img/cards/a-desk.jpg" alt="Design A on a laptop"></div>
+    <img class="phone" src="assets/img/cards/a-phone.jpg" alt="Design A on a phone">
+  </div>
 </div></header>
 
-<section><div class="wrap">
-  <h2>Three directions</h2>
-  <p style="color:var(--mute);margin:0">Same content and structure, three personalities. Tap one to explore; use the bar at the bottom to switch.</p>
-  <div class="grid">
-    <a class="c" href="a/"><div class="sw"><img src="assets/img/posture-strap-sm.jpg" alt="" style="object-position:center 25%"></div><div class="b"><span class="k">Direction A</span><h3>Clinical precision</h3><p>Light, editorial, evidence-led. Posture-analysis overlays and a clear four-step method. It reads as the expert biomechanics studio.</p><div class="chips"><span>Light</span><span>Serif + mono</span><span>Assessment-first</span></div></div></a>
-    <a class="c" href="b/"><div class="sw" style="background:#0A0A0A"><img src="assets/img/anatomy-runner-sm.jpg" alt=""></div><div class="b"><span class="k">Direction B</span><h3>Dark performance</h3><p>Bold, athletic, high-contrast. It keeps TR's dark identity and anatomy art but makes it modern, fast and confident, with the app front and centre.</p><div class="chips"><span>Dark</span><span>Condensed type</span><span>Motion</span></div></div></a>
-    <a class="c" href="c/"><div class="sw" style="background:#0F3B3A;display:flex;align-items:center;justify-content:center;gap:18px;padding:20px"><span style="font:800 44px/0.95 system-ui;letter-spacing:-.03em;color:#EDE6D8">Where does it <span style="color:#9FE2C5">hurt?</span></span></div><div class="b"><span class="k">Direction C</span><h3>Body map</h3><p>Starts where clients start: their pain. Tap a body area to see what's often behind it, how TR would work on it, and Darren's video. Then two taps to the right session.</p><div class="chips"><span>Interactive</span><span>11 colour themes</span><span>Problem-first</span></div></div></a>
-    <a class="c" href="app/"><div class="sw" style="background:#0B0B0B;display:grid;place-items:center"><img src="assets/video/split-squat.jpg" alt="" style="width:62%;height:auto;border-radius:12px"></div><div class="b"><span class="k">Client app</span><h3>TR app concept</h3><p>Log in, see your next session, open Darren's plan, tap an exercise and his video plays. Switch to "Darren's view" to assign an exercise and watch it land on the client's phone.</p><div class="chips"><span>iPhone + Android</span><span>Coach video</span><span>Synced</span></div></div></a>
+<section id="why"><div class="wrap rec">
+  <div class="rv">
+    <span class="badge">★ Our recommendation</span>
+    <h2>Direction A<br><em>Performance</em></h2>
+    <p class="lede">Dark, bold and athletic. It looks like a premium performance studio, and every section is there to move a visitor towards booking an assessment.</p>
+    <div class="cta"><a class="btn" href="a/">Explore Direction A</a></div>
   </div>
-  <p class="note">Archived: <a href="archive/c-studio/">the earlier "Warm studio" version of C</a>.</p>
-</div></section>
-
-<section><div class="wrap">
-  <h2>Proposed site map</h2>
-  <p style="color:var(--mute);margin:0">Today's site has 35+ pages, including duplicates and thin pages. The new structure brings it down to seven clear destinations. <b style="color:var(--acc)">Red</b> marks new pages.</p>
-  <div class="map">
-    <div class="node"><b>Home</b><small>Method · services · team · book</small></div>
-    <div class="node new"><b>The Method</b><small>Assess → Correct → Integrate → Perform. Posture &amp; gait explained</small></div>
-    <div class="node"><b>Training</b><small>Private · Customised group · Online group · Packs &amp; memberships</small></div>
-    <div class="node"><b>Remedial Massage</b><small>Emma · fascial hydration · Treat &amp; Train · health rebates</small></div>
-    <div class="node"><b>Programs &amp; Shop</b><small>REFORM · Metabolic typing · Training kit · Gift cards · Recommended</small></div>
-    <div class="node"><b>About</b><small>Darren &amp; Emma · qualifications · studio</small></div>
-    <div class="node new"><b>Book + Client login</b><small>One booking flow · member area · app download</small></div>
+  <div class="why rv">
+    <div><span class="n">01</span><div><b>It already looks like TR</b><p>Same black, same anatomy artwork your clients recognise, just modern, fast and confident. A step up, not a stranger.</p></div></div>
+    <div><span class="n">02</span><div><b>Booking is always one tap away</b><p>The Book button stays in the top bar, and three clear starting points (group, private, Treat &amp; Train) show their prices up front.</p></div></div>
+    <div><span class="n">03</span><div><b>It sells the app</b><p>The website shows visitors the TR app working: their session, your plan, your videos. That's what sets TR apart.</p></div></div>
+    <div><span class="n">04</span><div><b>Made for phones</b><p>Designed phone-first and checked on iPhone, iPad and laptop, which is where most new clients will find you.</p></div></div>
   </div>
-  <div class="flow"><span>Visitor</span><i>→</i><span>Understands the method</span><i>→</i><span>Books an assessment</span><i>→</i><span>Gets the app</span><i>→</i><span>Plan + videos before every session</span></div>
 </div></section>
 
-<section><div class="wrap">
-  <h2>How it would connect</h2>
-  <p style="color:var(--mute);margin:0 0 6px">The current site runs on Wix with Bookings, Members, Pricing Plans, Online Programs and Store. Wix now offers <b>headless</b> access, so a new website and a TR app can share the same bookings, member logins and plans. Clients log in once, and calendars stay in sync without migrating data.</p>
-  <table>
-    <tr><th>Piece</th><th>Proposal</th><th>Why</th></tr>
-    <tr><td>Website</td><td>New custom front end, with Wix kept as the engine (bookings, members, payments)</td><td>Full design freedom without losing existing clients, packs or history</td></tr>
-    <tr><td>Client app</td><td>One iPhone + Android app (React Native / Expo)</td><td>Same login as the website; sessions pulled live from bookings</td></tr>
-    <tr><td>Exercise videos</td><td>Darren films each exercise once and it's streamed from a video CDN</td><td>Instant start on mobile; roughly 200 clips cost a few dollars a month to stream</td></tr>
-    <tr><td>Session plans</td><td>Darren picks exercises per client per session from his library</td><td>Shows on the client's phone instantly (see the app's "Darren's view")</td></tr>
-  </table>
-  <p class="note">Concept only. Prices, bookings and client data shown here are illustrative, and nothing on this page is connected to the live site.</p>
+<section id="colours"><div class="wrap">
+  <div class="eb">Pick the colour</div>
+  <h2>Three ways to <em>wear it</em></h2>
+  <p class="lede">Same design, three accent colours. Tap one to open the site in it. On the site itself, you can switch colours from the small button next to the logo.</p>
+  <div class="swatches">
+    <a class="sw rv" href="a/?theme=volt"><img src="assets/img/cards/a-desk.jpg" alt="Volt colour"><div><i style="background:#E8FF3A"></i>Volt<small>The original</small></div></a>
+    <a class="sw rv" href="a/?theme=blaze"><img src="assets/img/cards/a-blaze.jpg" alt="Blaze colour"><div><i style="background:linear-gradient(90deg,#FF3D1F,#FF9A1F)"></i>Blaze<small>Heat &amp; energy</small></div></a>
+    <a class="sw rv" href="a/?theme=uv"><img src="assets/img/cards/a-uv.jpg" alt="Ultraviolet colour"><div><i style="background:linear-gradient(90deg,#8B5CFF,#FF4FD8)"></i>Ultraviolet<small>Bold &amp; different</small></div></a>
+  </div>
 </div></section>
 
-<footer><div class="wrap">Concept prepared by Ash · Photos, videos and copy © Total Reformation, used for this private preview only.</div></footer>
+<section id="wins"><div class="wrap">
+  <div class="eb">Whichever design you choose</div>
+  <h2>Easy wins on <em>today's site</em></h2>
+  <p class="lede">Things we spotted on the current site that a new one fixes straight away.</p>
+  <div class="wins">
+    <div class="win rv"><div class="was">Today</div><p>The social icons on the homepage link to Wix's own Facebook, Instagram, LinkedIn and Twitter, not to TR.</p><div class="now">New site</div><p>Your real Instagram, Facebook and YouTube, everywhere.</p></div>
+    <div class="win rv"><div class="was">Today</div><p>Massage prices differ between pages: one says 60 min is $90, the booking page charges $100.</p><div class="now">New site</div><p>One price list, pulled straight from your booking system.</p></div>
+    <div class="win rv"><div class="was">Today</div><p>The first screen is an image and a gradient. There's no way to book until you scroll or open a menu.</p><div class="now">New site</div><p>"Book assessment" on the very first screen and in the top bar of every page.</p></div>
+    <div class="win rv"><div class="was">Today</div><p>35+ pages, including duplicates and near-empty ones.</p><div class="now">New site</div><p>Seven clear destinations, so visitors find what they need.</p></div>
+  </div>
+</div></section>
+
+<section id="app"><div class="wrap app">
+  <div class="rv">
+    <div class="eb">The piece that sets TR apart</div>
+    <h2>Your session.<br><em>In their pocket.</em></h2>
+    <p class="lede">Every client gets the TR app. They see what's booked, open their next session, and watch you demonstrate each exercise before they walk in. You assign exercises from your own video library, and it lands on their phone straight away.</p>
+    <div class="feat">
+      <div><b>Calendar</b>Synced with the website's bookings</div>
+      <div><b>Their plan</b>The exercises you set, in order</div>
+      <div><b>Your videos</b>Tap an exercise to watch the demo</div>
+      <div><b>Your view</b>Assign and update from your phone</div>
+    </div>
+    <div class="cta"><a class="btn ghost" href="app/">Open the full app demo</a></div>
+  </div>
+  <div class="rv"><div class="live"><iframe src="app/?embed=1" title="TR app preview" loading="lazy"></iframe></div></div>
+</div></section>
+
+<section id="alternatives"><div class="wrap">
+  <div class="eb" style="color:var(--mute)">Also on the table</div>
+  <h2>Two other <em>directions</em></h2>
+  <p class="lede">Same content, different personalities. And if one idea from B or C appeals, it can become a section inside A. The body map, for example, would sit well under the method.</p>
+  <div class="alts">
+    <a class="alt rv" href="b/"><img src="assets/img/cards/b-desk.jpg" alt="Direction B"><div><span class="eb">Direction B</span><h3>Body map</h3><p>"Where does it hurt?" Visitors tap a body area to see what's often behind the pain and watch your video. 11 colour themes.</p></div></a>
+    <a class="alt rv" href="c/"><img src="assets/img/cards/c-desk.jpg" alt="Direction C"><div><span class="eb">Direction C</span><h3>Clinical</h3><p>Light, editorial and evidence-led, with posture-analysis overlays. It reads as the expert biomechanics clinic.</p></div></a>
+  </div>
+</div></section>
+
+<section id="how"><div class="wrap">
+  <div class="eb">How it works</div>
+  <h2>Keep Wix. <em>Upgrade the front.</em></h2>
+  <p class="lede">Your bookings, members, packs and payments already run on Wix. We keep all of that working behind the scenes and build the new website and the app on top of it.</p>
+  <div class="how">
+    <div class="rv"><b>Nothing gets lost</b><p>Clients, packs, booking history and payments stay exactly where they are. No data move.</p></div>
+    <div class="rv"><b>Same dashboard</b><p>You keep managing times, prices and clients in the Wix dashboard you already know.</p></div>
+    <div class="rv"><b>One login everywhere</b><p>The website and the TR app share the same accounts, so bookings show up in both automatically.</p></div>
+  </div>
+  <div class="map"><span>Home</span><span class="new">The Method</span><span>Training</span><span>Remedial Massage</span><span>Programs &amp; Shop</span><span>About Darren &amp; Emma</span><span class="new">Book + Client login</span></div>
+  <p style="color:var(--mute);font-size:14px;margin:10px 0 0">The new site map. Highlighted pages are new.</p>
+</div></section>
+
+<section id="next"><div class="wrap">
+  <div class="eb">Next steps</div>
+  <h2>From here to <em>launch</em></h2>
+  <div class="steps">
+    <div class="st rv"><b>Choose</b><p>Pick the direction and the colour. Tell us what you'd change.</p></div>
+    <div class="st rv"><b>Website</b><p>Build the new site on top of your Wix bookings, with your real prices and copy.</p></div>
+    <div class="st rv"><b>Film</b><p>Record each exercise once. Your library becomes the heart of the app.</p></div>
+    <div class="st rv"><b>App</b><p>Launch the TR app to a few clients first, then everyone.</p></div>
+  </div>
+</div></section>
+
+<section class="end"><div class="wrap">
+  <div class="eb">160 Martin Street, Brighton</div>
+  <h2 style="font-size:clamp(52px,9vw,140px)">Let's build <em>it</em>.</h2>
+  <div class="cta" style="justify-content:center"><a class="btn" href="a/">See Direction A</a><a class="btn ghost" href="app/">Try the app</a></div>
+</div></section>
+
+<footer><div class="wrap"><span>Concept prepared by Ash · Photos, videos and copy © Total Reformation, used for this private preview only.</span><span>Concept only, not connected to the live site · <a href="archive/c-studio/">Archived design</a></span></div></footer>
 <script src="assets/concept-bar.js"></script>
+<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(e=>io.observe(e));</script>
 </body>
 </html>

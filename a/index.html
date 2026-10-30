@@ -4,258 +4,248 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>Total Reformation · Concept A · Clinical</title>
-<meta name="description" content="Concept A: light, clinical, assessment-first redesign for Total Reformation.">
+<meta name="theme-color" content="#0A0A0A">
+<title>Total Reformation · Concept A · Performance</title>
+<meta name="description" content="Concept A (recommended): dark, athletic redesign for Total Reformation, with the TR app built in.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Total Reformation · Concept A · Clinical">
-<meta property="og:description" content="Concept A: light, clinical, assessment-first redesign for Total Reformation.">
+<meta property="og:title" content="Total Reformation · Concept A · Performance">
+<meta property="og:description" content="Concept A (recommended): dark, athletic redesign for Total Reformation, with the TR app built in.">
 <meta property="og:url" content="https://falk3n.github.io/tr-preview/a/">
 <meta property="og:image" content="https://falk3n.github.io/tr-preview/assets/img/og.jpg">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../assets/img/favicon.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Archivo+Narrow:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/concept-bar.css">
 <style>
-:root{--paper:#F3F1EC;--ink:#121212;--mute:#6B6A66;--line:#D9D5CC;--sig:#B83A22;--card:#FBFAF7;
---serif:"Instrument Serif",Georgia,serif;--sans:"Inter Tight",system-ui,sans-serif;--mono:"JetBrains Mono",ui-monospace,monospace}
+:root{--bg:#0A0A0A;--bg2:#141414;--fg:#F2F0EB;--mute:#8E8B85;--line:#262626;--acc:#E8FF3A;--red:#C9372C;
+--accrgb:232,255,58;--accbg:var(--acc);--onacc:#0A0A0A;--heroglow:#2a1210;--bandend:#151508;--endglow:#232a00;--figfx:none;
+--disp:"Archivo Narrow","Archivo",system-ui,sans-serif;--sans:"Archivo",system-ui,sans-serif}
+/* Themes: Volt is the original. Blaze and Ultraviolet are the two "pop" alternatives. */
+html[data-theme=blaze]{--acc:#FF6A2A;--accrgb:255,106,42;--accbg:linear-gradient(90deg,#FF3D1F,#FF9A1F);--heroglow:#4f1606;--bandend:#200c04;--endglow:#4a1505;--figfx:hue-rotate(14deg) saturate(1.25) brightness(1.05)}
+html[data-theme=uv]{--acc:#B07CFF;--accrgb:176,124,255;--accbg:linear-gradient(90deg,#8B5CFF,#FF4FD8);--heroglow:#2c0f58;--bandend:#130a26;--endglow:#33105a;--figfx:hue-rotate(275deg) saturate(1.35) brightness(1.1)}
+html[data-theme=blaze] .hero h1 .a,html[data-theme=uv] .hero h1 .a,html[data-theme=blaze] h2 em,html[data-theme=uv] h2 em{background:var(--accbg);-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-theme=uv] .hero h1 .a{filter:drop-shadow(0 0 24px rgba(255,79,216,.45))}
+html[data-theme=blaze] .hero h1 .a{filter:drop-shadow(0 0 24px rgba(255,90,31,.45))}
+body,.btn,.of,.hero .bg,.appband,.cta-end{transition:background .45s,color .45s}
+/* theme dropdown next to the logo */
+.brand{display:flex;align-items:center;gap:12px;position:relative}
+.tbtn{display:flex;align-items:center;gap:6px;height:30px;padding:0 9px 0 6px;border:1px solid #3a3a3a;background:rgba(255,255,255,.04);color:#ddd;cursor:pointer}
+.tbtn .dot{width:16px;height:16px;border-radius:50%;background:var(--accbg);box-shadow:0 0 10px rgba(var(--accrgb),.6)}
+.tbtn svg{width:10px;height:10px;stroke:currentColor;fill:none;stroke-width:2.2;transition:transform .2s}
+.tbtn[aria-expanded=true] svg{transform:rotate(180deg)}
+.tmenu{position:absolute;top:calc(100% + 14px);left:0;min-width:220px;margin:0;padding:6px;list-style:none;background:#111;border:1px solid #2a2a2a;box-shadow:0 18px 44px rgba(0,0,0,.5);z-index:40;animation:menuin .18s ease}
+.tmenu[hidden]{display:none}
+@keyframes menuin{from{opacity:0;transform:translateY(-6px)}}
+.tmenu .tgrp{padding:10px 12px 4px;font:700 10.5px var(--disp);letter-spacing:.18em;text-transform:uppercase;color:#8a8a8a}
+.tmenu button{display:flex;align-items:center;gap:11px;width:100%;padding:10px 12px;border:0;background:none;font:700 15px var(--disp);letter-spacing:.12em;text-transform:uppercase;color:var(--c);text-align:left;cursor:pointer}
+.tmenu button:hover,.tmenu button[aria-checked=true]{background:#1e1e1e}
+.tmenu button i{width:14px;height:14px;border-radius:50%;flex:none;background:var(--g)}
+.tmenu button[aria-checked=true]::after{content:"✓";margin-left:auto;color:#fff;font-size:13px}
+@media(max-width:420px){.logo{letter-spacing:.16em;font-size:13px}}
+@media(prefers-reduced-motion:reduce){.tmenu{animation:none}}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.55 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}a{color:inherit}
-.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
-.mono{font:500 11.5px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
-/* nav */
-nav.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font:600 14px var(--sans);letter-spacing:.18em}
-.brand i{display:grid;place-items:center;width:30px;height:30px;border:1.5px solid var(--ink);font:500 13px var(--sans);font-style:normal;letter-spacing:0}
-.links{display:flex;gap:26px;font-size:14px}.links a{text-decoration:none;color:var(--mute)}.links a:hover{color:var(--ink)}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--ink);color:var(--paper);text-decoration:none;font:500 14px var(--sans);border:0;cursor:pointer;white-space:nowrap}
-.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
-.btn .dot{width:7px;height:7px;border-radius:50%;background:var(--sig)}
-@media(max-width:860px){.links{display:none}}
+.wrap{max-width:1320px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+.eyebrow{font:700 12px/1 var(--disp);letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;background:var(--accbg);color:var(--onacc);text-decoration:none;font:700 14px var(--disp);letter-spacing:.14em;text-transform:uppercase;clip-path:polygon(0 0,100% 0,100% 70%,92% 100%,0 100%)}
+.btn.ghost{background:transparent;color:var(--fg);outline:1px solid #444;clip-path:none}
+.btn svg{width:16px;height:16px}
+nav.top{position:fixed;inset:0 0 auto 0;z-index:20;mix-blend-mode:normal;transition:background .3s}
+nav.top.solid{background:rgba(10,10,10,.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font:800 15px var(--disp);letter-spacing:.24em}
+.logo i{width:34px;height:34px;display:grid;place-items:center;background:var(--fg);color:var(--bg);font:800 14px var(--sans);font-style:normal;letter-spacing:0}
+.nl{display:flex;gap:30px;font:700 13px var(--disp);letter-spacing:.16em;text-transform:uppercase}.nl a{text-decoration:none;color:#bbb}.nl a:hover{color:var(--acc)}
+@media(max-width:900px){.nl{display:none}nav.top .btn{padding:12px 16px;font-size:12px}}
 /* hero */
-.hero{padding:clamp(40px,7vw,90px) 0 40px}
-.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,5vw,70px);align-items:end}
-h1{font:400 clamp(52px,8.4vw,124px)/.92 var(--serif);letter-spacing:-.02em;margin:18px 0 26px}
-h1 em{color:var(--sig)}
-.lede{font-size:clamp(17px,1.6vw,20px);max-width:34em;color:#2b2b2a}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.scan{position:relative;aspect-ratio:4/5;background:#e7e3db;overflow:hidden;border-radius:4px}
-.scan img{width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.02)}
-.scan svg{position:absolute;inset:0;width:100%;height:100%}
-.scan .tag{position:absolute;background:var(--card);border:1px solid var(--line);padding:6px 9px;font:500 10.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;border-radius:3px}
-.scan .tag b{color:var(--sig);font-weight:500}
-@media(max-width:860px){.hero .grid{grid-template-columns:1fr}.scan{aspect-ratio:4/4.4}}
-/* strip */
-.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:40px}
-.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.strip div.c{padding:20px 0;border-right:1px solid var(--line);padding-right:16px}.strip div.c:last-child{border:0}
-.strip .c+.c{padding-left:20px}
-.strip b{display:block;font:400 30px/1 var(--serif);margin-bottom:6px}
-@media(max-width:700px){.strip .wrap{grid-template-columns:1fr 1fr}.strip div.c:nth-child(2){border-right:0}.strip div.c:nth-child(3){padding-left:0}.strip div.c:nth-child(-n+2){border-bottom:1px solid var(--line)}}
-/* sections */
-section{padding:clamp(64px,9vw,120px) 0}
-h2{font:400 clamp(38px,5.4vw,72px)/1 var(--serif);letter-spacing:-.015em;margin:12px 0 18px}
-.sechead{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:48px}
-.sechead p{color:#3a3a38;max-width:32em}
-@media(max-width:860px){.sechead{grid-template-columns:1fr;gap:6px}}
-/* method */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
-.step{padding:22px 22px 30px 0;border-right:1px solid var(--line);min-height:260px;display:flex;flex-direction:column;gap:14px}
-.step+.step{padding-left:22px}.step:last-child{border-right:0}
-.step h3{font:400 30px/1.05 var(--serif);margin:0}
-.step p{margin:0;font-size:15.5px;color:#3a3a38}
-.step .n{font:500 12px var(--mono);color:var(--sig)}
-.step svg{margin-top:auto;width:64px;height:64px;stroke:var(--ink);fill:none;stroke-width:1.2}
-@media(max-width:900px){.steps{grid-template-columns:1fr 1fr}.step{min-height:0;border-bottom:1px solid var(--line)}.step:nth-child(2){border-right:0}.step:nth-child(3){padding-left:0}}
-@media(max-width:520px){.steps{grid-template-columns:1fr}.step,.step+.step{padding-left:0;border-right:0}}
-/* compare */
-.compare{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--line);border:1px solid var(--line);margin-top:56px}
-.compare>div{background:var(--card);padding:28px}
-.compare h4{margin:0 0 12px;font:500 12px var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.compare ul{margin:0;padding-left:18px;color:#3a3a38}.compare li{margin:6px 0}
-.compare .tr h4{color:var(--sig)}
-@media(max-width:700px){.compare{grid-template-columns:1fr}}
-/* services */
-.svc{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,4vw,60px)}
-.table{border-top:1px solid var(--ink)}
-.row{display:grid;grid-template-columns:1fr auto auto;gap:18px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--line)}
-.row h3{margin:0;font:500 18px var(--sans)}.row small{display:block;color:var(--mute);font-size:14px;margin-top:3px}
-.row .p{font:400 28px var(--serif)}.row .d{font:500 11px var(--mono);color:var(--mute);text-transform:uppercase}
-.row a{font:500 13px var(--sans);text-decoration:none;border-bottom:1px solid var(--ink)}
-.svc figure{margin:0;position:sticky;top:90px;align-self:start}
-.svc figure img{aspect-ratio:4/5;object-fit:cover;border-radius:4px}
-.svc figcaption{margin-top:10px}
-@media(max-width:860px){.svc{grid-template-columns:1fr}.svc figure{position:static}.row{grid-template-columns:1fr auto}.row a{grid-column:1/-1;justify-self:start}}
-/* dark band */
-.band{background:var(--ink);color:var(--paper)}
-.band .mono{color:#9a978f}
-.band h2 em{color:#F08A6E}
-.band .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
-.band img{border-radius:4px;aspect-ratio:16/10;object-fit:cover}
-.band p{color:#cfccc4}
-.pill{display:inline-block;padding:7px 12px;border:1px solid #444;border-radius:999px;font:500 12px var(--mono);margin:4px 6px 0 0;color:#ddd}
-@media(max-width:860px){.band .grid{grid-template-columns:1fr}}
-/* people */
-.people{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.person{background:var(--card);border:1px solid var(--line);display:grid;grid-template-columns:200px 1fr}
-.person img{height:100%;object-fit:cover;background:#fff}
-.person div{padding:24px}
-.person h3{font:400 32px/1 var(--serif);margin:6px 0 10px}
-.person ul{padding-left:16px;margin:12px 0 0;font-size:14.5px;color:#3a3a38}
-@media(max-width:960px){.people{grid-template-columns:1fr}}
-@media(max-width:520px){.person{grid-template-columns:1fr}.person img{aspect-ratio:1;height:auto}}
-/* programs */
-.progs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.prog{border:1px solid var(--line);background:var(--card);padding:26px;display:flex;flex-direction:column;gap:12px;min-height:270px}
-.prog h3{font:400 34px/1 var(--serif);margin:0}.prog p{margin:0;color:#3a3a38;font-size:15.5px}
-.prog .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
-.prog.feat{background:var(--sig);color:#fff;border-color:var(--sig)}.prog.feat p,.prog.feat .mono{color:#fff}
-.prog.feat .btn{background:#fff;color:var(--ink)}
-@media(max-width:900px){.progs{grid-template-columns:1fr}}
-/* book */
-.book{background:var(--card);border-top:1px solid var(--line)}
-.book .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px)}
-.slots{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:16px 0}
-.slots button{font:500 12px var(--mono);border:1px solid var(--line);background:var(--paper);padding:10px 0;border-radius:4px;cursor:pointer;color:var(--ink)}
-.slots button.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.times{display:flex;flex-wrap:wrap;gap:8px}.times span{padding:9px 14px;border:1px solid var(--line);border-radius:999px;font:500 13px var(--mono);cursor:pointer}
-.times span:hover{border-color:var(--sig);color:var(--sig)}
-@media(max-width:860px){.book .grid{grid-template-columns:1fr}}
-footer{padding:48px 0 120px;font-size:14px;color:var(--mute)}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.in{opacity:1;transform:none}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;padding-bottom:clamp(40px,6vw,80px)}
+.hero .bg{position:absolute;inset:0;background:radial-gradient(60% 50% at 70% 45%,var(--heroglow) 0%,transparent 70%),var(--bg)}
+.hero .fig{position:absolute;right:-4%;top:50%;transform:translateY(-52%);width:min(72vw,1100px);opacity:.95;mix-blend-mode:screen}
+.hero .fig img{width:100%;animation:float 9s ease-in-out infinite;filter:var(--figfx);transition:filter .45s}
+@keyframes float{50%{transform:translateY(-14px)}}
+.hero h1{position:relative;font:700 clamp(64px,13.5vw,220px)/.84 var(--disp);letter-spacing:-.02em;text-transform:uppercase;margin:0}
+.hero h1 .o{-webkit-text-stroke:1.5px var(--fg);color:transparent}
+.hero h1 .a{color:var(--acc)}
+.hero .sub{position:relative;display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-top:30px;flex-wrap:wrap}
+.hero .sub p{max-width:30em;color:#c9c6bf;margin:0}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:18px 0;background:var(--bg)}
+.ticker div{display:inline-block;animation:tick 32s linear infinite;font:700 22px var(--disp);letter-spacing:.18em;text-transform:uppercase;color:#555}
+.ticker span{color:var(--acc);margin:0 22px}
+@keyframes tick{to{transform:translateX(-50%)}}
+@media(max-width:700px){.hero .fig{width:130vw;right:-40%;top:38%;opacity:.55}}
+section{padding:clamp(70px,10vw,140px) 0}
+h2{font:700 clamp(44px,7vw,104px)/.9 var(--disp);text-transform:uppercase;letter-spacing:-.01em;margin:16px 0 0}
+h2 em{font-style:normal;color:var(--acc)}
+/* problem/solution split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,80px);align-items:start}
+.split p{color:#bdbab3;font-size:18px}
+.big{font:500 clamp(22px,2.4vw,30px)/1.3 var(--sans);color:var(--fg)!important}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+/* protocol rail */
+.rail{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:60px;background:var(--line)}
+.ph{background:var(--bg);padding:28px 24px 34px;position:relative;min-height:330px;display:flex;flex-direction:column}
+.ph .k{font:700 92px/.8 var(--disp);color:#1f1f1f;position:absolute;right:16px;top:18px}
+.ph h3{font:700 30px var(--disp);text-transform:uppercase;letter-spacing:.04em;margin:auto 0 10px}
+.ph p{margin:0;color:#a9a6a0;font-size:15.5px}
+.ph .bar{height:3px;background:var(--line);margin-top:22px;position:relative}.ph .bar i{position:absolute;inset:0 auto 0 0;background:var(--accbg)}
+.ph:hover{background:#111}
+@media(max-width:960px){.rail{grid-template-columns:1fr 1fr}.ph{min-height:260px}}
+@media(max-width:520px){.rail{grid-template-columns:1fr}}
+/* photo mosaic */
+.mosaic{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(80px,9vw,130px);gap:10px}
+.mosaic figure{margin:0;overflow:hidden;position:relative;background:#111}
+.mosaic img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.1);transition:filter .5s,transform .8s}
+.mosaic figure:hover img{filter:grayscale(0);transform:scale(1.03)}
+.mosaic figcaption{position:absolute;left:12px;bottom:10px;font:700 11px var(--disp);letter-spacing:.2em;text-transform:uppercase;background:var(--accbg);color:#000;padding:5px 8px}
+.m1{grid-column:1/6;grid-row:span 4}.m2{grid-column:6/9;grid-row:span 2}.m3{grid-column:9/13;grid-row:span 2}.m4{grid-column:6/10;grid-row:span 2}.m5{grid-column:10/13;grid-row:span 2}
+@media(max-width:760px){.mosaic{grid-template-columns:1fr 1fr;grid-auto-rows:150px}.m1{grid-column:1/3;grid-row:span 2}.m2,.m3,.m4,.m5{grid-column:auto;grid-row:span 1}}
+/* offers */
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
+.of{border:1px solid var(--line);padding:30px;background:var(--bg2);display:flex;flex-direction:column;gap:14px;min-height:360px}
+.of h3{font:700 34px/.95 var(--disp);text-transform:uppercase;margin:0}
+.of .pr{font:700 56px/1 var(--disp)}.of .pr small{font:500 14px var(--sans);color:var(--mute);margin-left:6px}
+.of ul{list-style:none;padding:0;margin:0;color:#b9b6af;font-size:15px}.of li{padding:8px 0;border-bottom:1px solid var(--line)}.of li:before{content:"→ ";color:var(--acc)}
+.of .btn{margin-top:auto;align-self:flex-start}
+.of.hot{background:var(--accbg);color:#0A0A0A;border-color:transparent}.of.hot ul{color:#222}.of.hot li{border-color:rgba(0,0,0,.15)}.of.hot li:before{color:#000}.of.hot .pr small{color:#333}.of.hot .btn{background:#0A0A0A;color:var(--acc)}
+@media(max-width:960px){.offers{grid-template-columns:1fr}.of{min-height:0}}
+/* app band */
+.appband{background:linear-gradient(180deg,var(--bg) 0%,var(--bandend) 100%);border-top:1px solid var(--line)}
+.appband .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.phone{width:min(320px,80vw);aspect-ratio:9/19.5;border-radius:46px;background:#000;border:10px solid #1c1c1c;box-shadow:0 0 0 1px #333,0 40px 80px rgba(var(--accrgb),.12);overflow:hidden;margin:auto;position:relative}
+.phone iframe{width:100%;height:100%;border:0;background:#0A0A0A}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+.feat div{border-top:2px solid var(--acc);border-image:var(--accbg) 1;padding-top:12px;color:#bdbab3;font-size:15px}.feat b{display:block;color:var(--fg);font:700 18px var(--disp);text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:900px){.appband .grid{grid-template-columns:1fr}}
+/* coaches */
+.coaches{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:50px}
+.co{position:relative;overflow:hidden;aspect-ratio:4/5;background:#111}
+.co img{width:100%;height:100%;object-fit:cover;filter:grayscale(1)}
+.co div{position:absolute;inset:auto 0 0 0;padding:26px;background:linear-gradient(transparent,rgba(0,0,0,.92))}
+.co h3{font:700 44px/.9 var(--disp);text-transform:uppercase;margin:6px 0}
+.co p{margin:0;color:#bbb;font-size:14.5px}
+@media(max-width:700px){.coaches{grid-template-columns:1fr}}
+.cta-end{text-align:center;padding:clamp(90px,12vw,170px) 0;border-top:1px solid var(--line);background:radial-gradient(50% 60% at 50% 100%,var(--endglow) 0%,transparent 70%)}
+.cta-end h2{font-size:clamp(54px,10vw,160px)}
+footer{border-top:1px solid var(--line);padding:30px 0 110px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.ticker div,.hero .fig img{animation:none}}
 </style>
 </head>
 <body>
-<nav class="top"><div class="wrap">
-  <a class="brand" href="#"><i>TR</i>TOTAL REFORMATION</a>
-  <div class="links"><a href="#method">Method</a><a href="#services">Services</a><a href="#massage">Massage</a><a href="#programs">Programs</a><a href="#team">Team</a></div>
-  <a class="btn" href="#book"><span class="dot"></span>Book an assessment</a>
+<nav class="top" id="nav"><div class="wrap">
+  <div class="brand">
+    <a class="logo" href="#"><i>TR</i>TOTAL REFORMATION</a>
+    <button class="tbtn" id="tbtn" aria-haspopup="true" aria-expanded="false" aria-controls="tmenu" title="Colour theme"><span class="dot"></span><svg viewBox="0 0 10 10"><path d="M1.5 3.5 5 7l3.5-3.5"/></svg></button>
+    <ul class="tmenu" id="tmenu" role="menu" aria-label="Colour theme" hidden></ul>
+  </div>
+  <div class="nl"><a href="#method">Method</a><a href="#train">Train</a><a href="#app">App</a><a href="#coaches">Coaches</a></div>
+  <a class="btn" href="#start">Book</a>
 </div></nav>
 
-<header class="hero"><div class="wrap grid">
-  <div>
-    <div class="mono">Human biomechanics · Brighton, Melbourne</div>
-    <h1>Train the body you <em>actually</em> have.</h1>
-    <p class="lede">We start where most gyms never look: how you stand, how you walk, and where you're compensating. Then we rebuild movement in three dimensions so strength stops costing you pain.</p>
-    <div class="cta"><a class="btn" href="#book"><span class="dot"></span>Book your movement assessment</a><a class="btn ghost" href="#method">How it works</a></div>
+<header class="hero">
+  <div class="bg"></div>
+  <div class="fig"><img src="../assets/img/anatomy-runner.jpg" alt="Anatomical figure in motion"></div>
+  <div class="wrap" style="position:relative;width:100%">
+    <div class="eyebrow">Human performance &amp; optimisation · Brighton</div>
+    <h1>Move<br><span class="o">Like You</span><br>Were <span class="a">Built</span></h1>
+    <div class="sub">
+      <p>Biomechanics-led training for people who are done with pain, plateaus and programs that ignore how they actually move.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn" href="#start">Book assessment <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 8h12M9 3l5 5-5 5"/></svg></a><a class="btn ghost" href="#method">The method</a></div>
+    </div>
   </div>
-  <div class="scan reveal">
-    <img src="../assets/img/posture-strap.jpg" alt="Client during a posture assessment">
-    <svg viewBox="0 0 100 125" preserveAspectRatio="none" aria-hidden="true">
-      <line x1="52" y1="0" x2="52" y2="125" stroke="#D2452B" stroke-width=".35" stroke-dasharray="1.2 1.2"/>
-      <line x1="30" y1="38" x2="76" y2="35" stroke="#121212" stroke-width=".3"/>
-      <line x1="34" y1="78" x2="72" y2="80" stroke="#121212" stroke-width=".3"/>
-      <circle cx="52" cy="23" r="1.2" fill="#D2452B"/><circle cx="53" cy="36.5" r="1.2" fill="#D2452B"/><circle cx="52" cy="79" r="1.2" fill="#D2452B"/>
-    </svg>
-    <span class="tag" style="top:8%;left:6%">Plumb line · <b>ref</b></span>
-    <span class="tag" style="top:27%;right:5%">Shoulder tilt <b>2.4°</b></span>
-    <span class="tag" style="top:62%;left:5%">Pelvis rotation <b>R 3°</b></span>
-    <span class="tag" style="bottom:5%;right:5%">Gait · <b>mid-stance</b></span>
-    <span class="tag" style="bottom:5%;left:5%;opacity:.8">Illustrative values</span>
-  </div>
-</div>
-<div class="strip"><div class="wrap">
-  <div class="c"><b>Posture</b><span class="mono">Static analysis</span></div>
-  <div class="c"><b>Gait</b><span class="mono">Walking pattern</span></div>
-  <div class="c"><b>3D</b><span class="mono">Full-body movement</span></div>
-  <div class="c"><b>Fascia</b><span class="mono">Remedial therapy</span></div>
-</div></div>
 </header>
+<div class="ticker"><div>Posture<span>/</span>Gait<span>/</span>Fascia<span>/</span>3D movement<span>/</span>Strength<span>/</span>Running<span>/</span>Recovery<span>/</span>Posture<span>/</span>Gait<span>/</span>Fascia<span>/</span>3D movement<span>/</span>Strength<span>/</span>Running<span>/</span>Recovery<span>/</span></div></div>
 
 <section id="method"><div class="wrap">
-  <div class="sechead">
-    <div><div class="mono">01 · The method</div><h2>Assess. Correct. Integrate. Perform.</h2></div>
-    <p>Traditional programs train isolated muscles in two dimensions. Your body doesn't move that way. Every TR client follows the same four-stage process, paced to what your body shows us.</p>
+  <div class="split">
+    <div class="rv"><div class="eyebrow">The problem</div><h2>Gyms train <em>parts</em>.<br>You move as a whole.</h2></div>
+    <div class="rv"><p class="big">Machines and isolated lifts work in two dimensions. Your spine, hips and feet work in three. That gap is where pain, injury and plateaus live.</p>
+      <p>At TR we assess your posture and gait first, release what's restricted, then rebuild integrated, three-dimensional movement under load. It's challenging for your brain as much as your body.</p></div>
   </div>
-  <div class="steps">
-    <div class="step reveal"><span class="n">01</span><h3>Assess</h3><p>Static posture photos, gait analysis and a movement screen. We find what's been restricting you, often for years.</p>
-      <svg viewBox="0 0 64 64"><circle cx="32" cy="12" r="5"/><path d="M32 17v22M22 26h20M32 39l-8 18M32 39l8 18"/><path d="M8 4v56" stroke-dasharray="2 3"/></svg></div>
-    <div class="step reveal"><span class="n">02</span><h3>Correct</h3><p>Self-myofascial release and corrective patterns restore pelvic position, breathing and core control.</p>
-      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22"/><circle cx="32" cy="32" r="12"/><path d="M32 4v8M32 52v8M4 32h8M52 32h8"/></svg></div>
-    <div class="step reveal"><span class="n">03</span><h3>Integrate</h3><p>Three-dimensional, full-body patterns that connect feet to fingertips. Hard on the brain as well as the body.</p>
-      <svg viewBox="0 0 64 64"><path d="M8 48C20 10 44 54 56 16"/><path d="M8 16c12 38 36-6 48 32"/></svg></div>
-    <div class="step reveal"><span class="n">04</span><h3>Perform</h3><p>Load, speed and running mechanics, built on a structure that can take it. Strength that lasts decades.</p>
-      <svg viewBox="0 0 64 64"><path d="M6 54h52M12 54V40M24 54V30M36 54V22M48 54V10"/></svg></div>
-  </div>
-  <div class="compare reveal">
-    <div><h4>Conventional gym training</h4><ul><li>Isolated muscles, machines, 2D planes</li><li>Same template for everyone</li><li>Pain treated as normal</li></ul></div>
-    <div class="tr"><h4>Total Reformation</h4><ul><li>Whole-body, three-dimensional movement</li><li>Programmed from your assessment</li><li>Root causes: posture, gait, fascia, nutrition</li></ul></div>
+  <div class="rail">
+    <div class="ph rv"><span class="k" aria-hidden="true">01</span><div class="eyebrow">Week 0</div><h3>Assess</h3><p>Posture photos, gait analysis and a movement screen.</p><div class="bar"><i style="width:25%"></i></div></div>
+    <div class="ph rv"><span class="k" aria-hidden="true">02</span><div class="eyebrow">Weeks 1–4</div><h3>Release &amp; correct</h3><p>Myofascial release, pelvic position and deep core control.</p><div class="bar"><i style="width:50%"></i></div></div>
+    <div class="ph rv"><span class="k" aria-hidden="true">03</span><div class="eyebrow">Weeks 4–12</div><h3>Integrate</h3><p>Full-body 3D patterns: lunges, rotations, cable chains.</p><div class="bar"><i style="width:75%"></i></div></div>
+    <div class="ph rv"><span class="k" aria-hidden="true">04</span><div class="eyebrow">Ongoing</div><h3>Perform</h3><p>Load, power and running mechanics that last.</p><div class="bar"><i style="width:100%"></i></div></div>
   </div>
 </div></section>
 
-<section id="services" style="padding-top:0"><div class="wrap">
-  <div class="sechead">
-    <div><div class="mono">02 · Services &amp; pricing</div><h2>Clear options. No guesswork.</h2></div>
-    <p>Studio sessions at 160 Martin Street, Brighton, or online with follow-along video. Session packs and memberships available.</p>
+<section style="padding-top:0"><div class="wrap">
+  <div class="mosaic">
+    <figure class="m1 rv"><img src="../assets/img/darren-studio.jpg" alt="Darren training in the studio"><figcaption>Rotation</figcaption></figure>
+    <figure class="m2 rv"><img src="../assets/img/trx-sm.jpg" alt="Suspension training"><figcaption>Stability</figcaption></figure>
+    <figure class="m3 rv"><img src="../assets/img/overhead-sm.jpg" alt="Overhead reach"><figcaption>Reach</figcaption></figure>
+    <figure class="m4 rv"><img src="../assets/img/cable-lunge-sm.jpg" alt="Cable lunge"><figcaption>Integration</figcaption></figure>
+    <figure class="m5 rv"><img src="../assets/img/knee-sm.jpg" alt="Kneeling position"><figcaption>Control</figcaption></figure>
   </div>
-  <div class="svc">
-    <div class="table">
-      <div class="row"><div><h3>Private training · studio</h3><small>One-on-one, programmed from your assessment</small></div><div><span class="p">$85</span> <span class="d">45 min</span></div><a href="#book">Book</a></div>
-      <div class="row"><div><h3>Private training · extended</h3><small>Deeper sessions for rehab and performance blocks</small></div><div><span class="p">$120</span> <span class="d">60 min</span></div><a href="#book">Book</a></div>
-      <div class="row"><div><h3>Customised group</h3><small>Small group, individual programs. Mornings, 6 days</small></div><div><span class="p">$45</span> <span class="d">45 min</span></div><a href="#book">Book</a></div>
-      <div class="row"><div><h3>Online group</h3><small>Live via video, follow-along programming</small></div><div><span class="p">$40</span> <span class="d">45 min</span></div><a href="#book">Book</a></div>
-      <div class="row"><div><h3>Treat &amp; Train</h3><small>30 min remedial + 30 min training. Health fund claimable</small></div><div><span class="p">$120</span> <span class="d">60 min</span></div><a href="#book">Book</a></div>
-      <div class="row"><div><h3>Session packs</h3><small>8 × private $640 · 12 × group $420 · and more</small></div><div><span class="p">from $320</span></div><a href="#book">View</a></div>
+</div></section>
+
+<section id="train" style="padding-top:0"><div class="wrap">
+  <div class="eyebrow">Train with us</div><h2>Pick your <em>entry</em>.</h2>
+  <div class="offers">
+    <div class="of rv"><div class="eyebrow">Small group</div><h3>Customised<br>Group</h3><div class="pr">$45<small>/ 45 min</small></div><ul><li>Your own program, group energy</li><li>Mon–Sat morning sessions</li><li>8 and 12 packs available</li></ul><a class="btn ghost" href="#start">See times</a></div>
+    <div class="of hot rv"><div class="eyebrow" style="color:#000">Most results</div><h3>Private<br>Studio</h3><div class="pr">$85<small>/ 45 min</small></div><ul><li>Full assessment and reassessment</li><li>1:1 coaching with Darren or Emma</li><li>Session plan and videos in the app</li></ul><a class="btn" href="#start">Book private</a></div>
+    <div class="of rv"><div class="eyebrow">Recovery</div><h3>Treat<br>&amp; Train</h3><div class="pr">$120<small>/ 60 min</small></div><ul><li>30 min remedial with Emma</li><li>30 min corrective training</li><li>Health fund claimable</li></ul><a class="btn ghost" href="#start">Book combo</a></div>
+  </div>
+</div></section>
+
+<section class="appband" id="app"><div class="wrap grid">
+  <div class="rv">
+    <div class="eyebrow">The TR app</div>
+    <h2>Your session.<br><em>In your pocket.</em></h2>
+    <p style="color:#bdbab3;max-width:32em">Every client gets the TR app. See what's booked, open tomorrow's session, and watch Darren demonstrate every exercise before you walk in the door.</p>
+    <div class="feat">
+      <div><b>Calendar</b>Upcoming sessions synced with the website</div>
+      <div><b>Your plan</b>Exercises Darren set for you, in order</div>
+      <div><b>Coach video</b>Tap any exercise to watch the demo</div>
+      <div><b>Homework</b>Between-session drills and Emma's tutorials</div>
     </div>
-    <figure class="reveal"><img src="../assets/img/box-coach.jpg" alt="Darren coaching a client"><figcaption class="mono">Fig. 2: Single-leg loading, studio session</figcaption></figure>
+  </div>
+  <div class="rv"><div class="phone"><iframe src="../app/?embed=1" title="TR app preview" loading="lazy"></iframe></div></div>
+</div></section>
+
+<section id="coaches"><div class="wrap">
+  <div class="eyebrow">The coaches</div><h2>Darren <em>&amp;</em> Emma</h2>
+  <div class="coaches">
+    <div class="co rv"><img src="../assets/img/darren-arms.jpg" alt="Darren Cox"><div><span class="eyebrow">Founder · Biomechanics</span><h3>Darren Cox</h3><p>Functional Patterns HBS · ASCA · FDN-P · Metabolic Typing · CHEK</p></div></div>
+    <div class="co rv"><img src="../assets/img/emma-coach.jpg" alt="Emma Brook coaching"><div><span class="eyebrow">Trainer · Remedial massage</span><h3>Emma Brook</h3><p>S&amp;C L1 · Functional Patterns · CHEK · Precision Nutrition · Deep tissue</p></div></div>
   </div>
 </div></section>
 
-<section class="band" id="massage"><div class="wrap grid">
-  <div class="reveal"><img src="../assets/img/emma-treat.jpg" alt="Emma during a remedial massage treatment" style="aspect-ratio:4/5"></div>
-  <div>
-    <div class="mono">03 · Remedial massage with Emma</div>
-    <h2>Hydrate the fascia. <em>Unlock</em> the movement.</h2>
-    <p>Hands-on fascial hydration paired with our corrective approach to exercise. Reduce pain, improve posture and give your training somewhere to go. After every session you get Emma's follow-up tutorials in the app.</p>
-    <div><span class="pill">45 min · $85</span><span class="pill">60 min · $100</span><span class="pill">Mobile · $120</span><span class="pill">Private health rebates</span></div>
-    <div class="cta"><a class="btn" style="background:var(--paper);color:var(--ink)" href="#book">Book with Emma</a></div>
-  </div>
-</div></section>
+<div class="cta-end" id="start"><div class="wrap">
+  <div class="eyebrow">160 Martin St, Brighton</div>
+  <h2>Start <em>moving</em><br>properly.</h2>
+  <div style="margin-top:34px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap"><a class="btn" href="#train" data-concept="Movement assessment">Book your assessment</a><a class="btn ghost" href="tel:0409940121">0409 940 121</a></div>
+</div></div>
+<footer><div class="wrap"><span>© Total Reformation</span><span><a href="mailto:info@totalreformation.com">info@totalreformation.com</a> · <a href="https://www.instagram.com/totalreformation" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/totalreformationaustralia" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.youtube.com/totalreformation" target="_blank" rel="noopener">YouTube</a></span></div></footer>
 
-<section id="programs"><div class="wrap">
-  <div class="sechead">
-    <div><div class="mono">04 · Learn between sessions</div><h2>Programs that make every session count.</h2></div>
-    <p>Start with REFORM before your first studio visit and you'll arrive knowing the fundamentals. Less time explaining, more time training.</p>
-  </div>
-  <div class="progs">
-    <div class="prog feat reveal"><span class="mono">Start here · 30 days</span><h3>REFORM</h3><p>Video tutorials and follow-along sessions on technique, body awareness and pain-free movement fundamentals.</p><div class="foot"><b>$180</b><a class="btn" href="#book" data-concept="REFORM online program">Begin</a></div></div>
-    <div class="prog reveal"><span class="mono">Nutrition</span><h3>Metabolic Typing</h3><p>An in-depth questionnaire, a 22-page report and a 45-minute consult with Darren on the fuel mix your body runs best on.</p><div class="foot"><b>$120</b><a class="btn ghost" href="#book" data-concept="Metabolic Typing program">Details</a></div></div>
-    <div class="prog reveal"><span class="mono">Equipment</span><h3>TR Training Kit</h3><p>Door anchor, resistance and fabric bands, straps and massage ball. Everything the online programs use.</p><div class="foot"><b>$180</b><a class="btn ghost" href="#book" data-concept="TR Training Kit (shop)">Shop</a></div></div>
-  </div>
-</div></section>
-
-<section id="team" style="padding-top:0"><div class="wrap">
-  <div class="sechead"><div><div class="mono">05 · Practitioners</div><h2>Two specialists. One system.</h2></div><p>Qualified across biomechanics, strength &amp; conditioning, functional diagnostics and soft-tissue therapy.</p></div>
-  <div class="people">
-    <div class="person reveal"><img src="../assets/img/darren-portrait.jpg" alt="Darren Cox"><div><span class="mono">Founder &amp; director</span><h3>Darren Cox</h3><p style="margin:0;font-size:15px;color:#3a3a38">Human biomechanics specialist with a background in elite sport, strength &amp; conditioning and rehabilitation.</p>
-      <ul><li>Functional Patterns: Human Biomechanics Specialist</li><li>ASCA Strength &amp; Conditioning</li><li>FDN-P · Certified Metabolic Typing Advisor</li><li>CHEK Institute · Anatomy Trains</li></ul></div></div>
-    <div class="person reveal"><img src="../assets/img/emma-portrait.jpg" alt="Emma Brook"><div><span class="mono">Trainer · remedial massage</span><h3>Emma Brook</h3><p style="margin:0;font-size:15px;color:#3a3a38">Ten years in health and fitness after an international dance career. Now focused on movement, sports performance and fascial therapy.</p>
-      <ul><li>Strength &amp; Conditioning Coach L1</li><li>Functional Patterns: 10-Week Foundations</li><li>CHEK Institute · Precision Nutrition L1</li><li>Deep Tissue Massage for Injuries</li></ul></div></div>
-  </div>
-</div></section>
-
-<section class="book" id="book"><div class="wrap grid">
-  <div><div class="mono">06 · Book</div><h2>Start with an assessment.</h2><p style="color:#3a3a38">Choose a time below. You'll get a confirmation, a short intake form, and access to the TR app with your session plan.</p>
-    <p class="mono" style="margin-top:30px">160 Martin Street, Brighton VIC 3186<br>0409 940 121 · info@totalreformation.com</p></div>
-  <div>
-    <div class="mono">Customised group · this week</div>
-    <div class="slots" id="days"></div>
-    <div class="times"><span>6:30 am</span><span>7:00 am</span><span>10:00 am</span><span>10:30 am</span></div>
-    <p class="mono" style="margin-top:16px">Concept: live slots would come from the booking system</p>
-  </div>
-</div></section>
-
-<footer><div class="wrap"><span>© Total Reformation · Human Performance &amp; Optimisation</span><span><a href="https://www.instagram.com/totalreformation" target="_blank" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/totalreformationaustralia" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.youtube.com/totalreformation" target="_blank" rel="noopener">YouTube</a></span></div></footer>
-
-<script src="../assets/concept-bar.js" data-concept="A · Clinical"></script>
+<script src="../assets/concept-bar.js"></script>
 <script>
-const d=document.getElementById('days'),n=new Date();for(let i=0;i<7;i++){const x=new Date(n);x.setDate(n.getDate()+i);const b=document.createElement('button');b.innerHTML=x.toLocaleDateString('en-AU',{weekday:'short'})+'<br>'+x.getDate();if(!i)b.className='on';b.onclick=()=>{d.querySelectorAll('button').forEach(e=>e.className='');b.className='on'};d.appendChild(b)}
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+// Theme dropdown: names in their own colour, remembered on this device; ?theme=<id> also works.
+const THEMES=[{g:'Colour'},
+ {id:'volt',n:'Volt',c:'#E8FF3A',g2:'#E8FF3A',meta:'#0A0A0A'},
+ {id:'blaze',n:'Blaze',c:'#FF7A3D',g2:'linear-gradient(90deg,#FF3D1F,#FF9A1F)',meta:'#0A0A0A'},
+ {id:'uv',n:'Ultraviolet',c:'#C29BFF',g2:'linear-gradient(90deg,#8B5CFF,#FF4FD8)',meta:'#0A0A0A'}];
+const tbtn=document.getElementById('tbtn'),tmenu=document.getElementById('tmenu');
+function setTheme(id,save){const t=THEMES.find(x=>x.id&&x.id===id)||THEMES[1];
+ if(t.id==='volt')document.documentElement.removeAttribute('data-theme');else document.documentElement.dataset.theme=t.id;
+ tbtn.setAttribute('aria-label','Colour theme: '+t.n);tmenu.querySelectorAll('button').forEach(b=>b.setAttribute('aria-checked',b.dataset.t===t.id));
+ const fr=document.querySelector('.phone iframe');if(fr){const u='../app/?embed=1'+(t.id==='volt'?'':'&accent='+t.id);if(fr.getAttribute('src')!==u)fr.setAttribute('src',u)}
+ if(save)try{localStorage.setItem('tr-a-theme',t.id)}catch(e){}}
+THEMES.forEach(t=>{if(t.g){const h=document.createElement('li');h.className='tgrp';h.setAttribute('role','presentation');h.textContent=t.g;tmenu.appendChild(h);return}
+ const li=document.createElement('li'),b=document.createElement('button');b.dataset.t=t.id;b.setAttribute('role','menuitemradio');
+ b.style.setProperty('--c',t.c);b.style.setProperty('--g',t.g2);b.innerHTML='<i></i>'+t.n;b.onclick=()=>{setTheme(t.id,true);menu(false)};li.appendChild(b);tmenu.appendChild(li)});
+function menu(open){tmenu.hidden=!open;tbtn.setAttribute('aria-expanded',open)}
+tbtn.onclick=e=>{e.stopPropagation();menu(tmenu.hidden)};
+document.addEventListener('click',e=>{if(!tmenu.hidden&&!tmenu.contains(e.target))menu(false)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')menu(false)});
+setTheme(new URLSearchParams(location.search).get('theme')||(()=>{try{return localStorage.getItem('tr-a-theme')}catch(e){}})()||'volt');
+const nav=document.getElementById('nav');addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.rv').forEach(e=>io.observe(e));
 </script>
 </body>
 </html>

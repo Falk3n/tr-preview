@@ -5,8 +5,8 @@
   const here = location.pathname.replace(/index\.html$/, '');
   const small = matchMedia('(max-width: 560px)').matches;
   const items = small
-    ? [['', 'Overview'], ['a/', 'A'], ['b/', 'B'], ['c/', 'C'], ['app/', 'App']]
-    : [['', 'Overview'], ['a/', 'A · Clinical'], ['b/', 'B · Performance'], ['c/', 'C · Body map'], ['app/', 'App']];
+    ? [['', 'Pitch'], ['a/', 'A ★'], ['b/', 'B'], ['c/', 'C'], ['app/', 'App']]
+    : [['', 'Pitch'], ['a/', 'A · Performance ★'], ['b/', 'B · Body map'], ['c/', 'C · Clinical'], ['app/', 'App']];
   const bar = document.createElement('nav');
   bar.className = 'cbar';
   bar.setAttribute('aria-label', 'Concept switcher');
@@ -19,7 +19,7 @@
   }
   if (here.includes('/archive/')) {
     const a = document.createElement('a');
-    a.href = here; a.textContent = small ? 'Old C' : 'Archived: old C'; a.className = 'on';
+    a.href = here; a.textContent = small ? 'Old' : 'Archived design'; a.className = 'on';
     bar.appendChild(a);
   }
   document.body.appendChild(bar);

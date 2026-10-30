@@ -1,12 +1,12 @@
 (() => {
-  // Site root = wherever assets/concept-bar.js lives, so pages at any depth (incl. /archive/) link correctly.
+  // Site root = wherever assets/concept-bar.js lives, so pages at any depth link correctly.
   const src = document.currentScript && document.currentScript.src;
   const base = src ? new URL('../', src).pathname : '/';
   const here = location.pathname.replace(/index\.html$/, '');
   const small = matchMedia('(max-width: 560px)').matches;
   const items = small
-    ? [['', 'Pitch'], ['a/', 'A ★'], ['b/', 'B'], ['c/', 'C'], ['app/', 'App']]
-    : [['', 'Pitch'], ['a/', 'A · Performance ★'], ['b/', 'B · Body map'], ['c/', 'C · Clinical'], ['app/', 'App']];
+    ? [['', 'Pitch'], ['a/', 'Website'], ['app/', 'App']]
+    : [['', 'Pitch'], ['a/', 'The website'], ['app/', 'The app']];
   const bar = document.createElement('nav');
   bar.className = 'cbar';
   bar.setAttribute('aria-label', 'Concept switcher');
@@ -15,11 +15,6 @@
     a.href = base + p;
     a.textContent = label;
     if (base + p === here) a.className = 'on';
-    bar.appendChild(a);
-  }
-  if (here.includes('/archive/')) {
-    const a = document.createElement('a');
-    a.href = here; a.textContent = small ? 'Old' : 'Archived design'; a.className = 'on';
     bar.appendChild(a);
   }
   document.body.appendChild(bar);
